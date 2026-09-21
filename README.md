@@ -51,7 +51,7 @@ This section is my personal knowledge base. I'll add key takeaways from each ses
 
 ---
 
-### Session 1: Welcome & Python 1 (Sep 15, 2026)
+### Day 1: Welcome & Python Intro (Sep 14, 2026)
 
 **Key Takeaways:**
 
@@ -69,7 +69,7 @@ This section is my personal knowledge base. I'll add key takeaways from each ses
 
 ---
 
-### Session 2: Python 2 — Functions, Lambda & Control Flow (Sep 16, 2026)
+### Day 2: Session 1 — Functions, Lambda & Control Flow (Sep 15, 2026)
 
 **Key Takeaways:**
 
@@ -95,7 +95,7 @@ This section is my personal knowledge base. I'll add key takeaways from each ses
 
 ---
 
-### Session 3: Python 3 — Strings, Files & Lists (Sep 17, 2026)
+### Day 3: Session 2 — Strings & Files (Sep 16, 2026)
 
 **Key Takeaways:**
 
@@ -104,32 +104,32 @@ This section is my personal knowledge base. I'll add key takeaways from each ses
 - **Python Strings — Representation & Core Operations:**
     - **Definition:** A string is a **sequence of characters** enclosed in single, double, or triple quotes.
     - **No Separate Character Type:** In Python, there is no `char` type — a single character is just a string of length 1.
-    - **Immutability:** Strings cannot be changed in place; operations create new strings.
-    - **Indexing:** Each character has an index starting from `0` (zero-based).
+    - **Immutability:** Strings cannot be changed in place; operations create new strings. Demonstrated with `id()` — the memory address changes after concatenation.
+    - **Indexing:** Each character has an index starting from `0` (zero-based); negative indices count from the end (`-1` = last character).
     - **Concatenation:** Combine strings with `+`.
     - **Repetition:** Repeat strings with `*`.
     - **Length:** Use `len()` to count characters.
 
 - **String Indexing & Slicing:**
     - **Indexing:** Access individual characters with `string[index]`.
-    - **Slicing:** Extract a range with `string[start:stop:step]`. The **stop index is exclusive** (not included).
+    - **Slicing:** Extract a range with `string[start:stop:step]`. The **stop index is exclusive** (not included). Defaults: start=`0`, stop=end, step=`1`.
     - **Negative Indexing:** Access from the end (`-1` = last character).
-    - **Example:** `"frontier"[0:4]` returns `"fron"`.
+    - **Example:** `"Monty Python"[0:4]` returns `"Mont"`; `"frontier"[0:4]` returns `"fron"`.
 
 - **String Methods & Object Inspection:**
-    - **Common Methods:** `.upper()`, `.lower()`, `.replace()`, `.split()`, `.find()`, `.startswith()`, `.endswith()`.
-    - **`dir()`:** Lists all available methods for an object — a great way to explore.
-    - **`type()`:** Confirms the data type.
-    - **Parsing Example:** Extracting the name from an email using `.find("@")` and slicing.
+    - **Common Methods:** `.upper()`, `.lower()`, `.replace()`, `.split()`, `.find()`, `.startswith()`, `.endswith()`, `.join()`.
+    - **`dir()`:** Lists all available methods for an object — a great way to explore (e.g., `dir('Lamacun')`).
+    - **`type()`:** Confirms the data type (e.g., `type(s)` returns `str`).
+    - **Parsing Example:** Extracting the username from an email using `.find("@")` and slicing: `email[0:findex]` returns `"john.doe"`.
 
 - **String Comparisons & Boolean Checks:**
-    - **Equality:** `==` and `!=` compare strings.
+    - **Equality:** `==` and `!=` compare strings (e.g., `'Helo' == 'Hello'` returns `False`).
     - **Prefix/Suffix:** `.startswith()` and `.endswith()` return `True`/`False`.
     - **Use Case:** Filtering or validating text data.
 
 - **Loop-Based Vowel Counting:**
     - **Approach:** Normalize to lowercase, iterate through each character, increment a counter when a vowel is found.
-    - **Two Implementations:** One with a `while` loop, one with a `for` loop — same logic, different syntax.
+    - **Two Implementations:** One with a `while` loop (`count_vowels_while`), one with a `for` loop (`count_vowels_for`) — same logic, different syntax.
 
 - **Type Annotations (Optional but Good Practice):**
     - Python is **dynamically typed**, so annotations are not required.
@@ -138,72 +138,54 @@ This section is my personal knowledge base. I'll add key takeaways from each ses
 
 - **Palindrome Exercise:**
     - **Definition:** A word, phrase, or number that reads the same forward and backward (ignoring spaces, punctuation, and capitalization).
-    - **Approach:** Use `left` and `right` indices to compare characters from opposite ends.
-    - **Two Versions:** One using a `while` loop, one using a `for` loop.
+    - **Approach:** Clean the input with `''.join(c for c in input_string if c.isalnum()).lower()`, then use `left` and `right` indices to compare characters from opposite ends, moving inward.
+    - **Two Versions:** One using a `while` loop (`is_palindrome_while`), one using a `for` loop (`is_palindrome_for`).
     - **Example:** `"A man, a plan, a canal, Panama"` is a palindrome.
 
 - **Python File Concepts & Opening Files:**
-    - **Why Files Matter:** Data comes from different sources — we need to read, write, and append.
-    - **Built-in `open()` Function:** `open(filepath, mode)`
+    - **Why Files Matter:** Data comes from different sources — we need to read, write, and append. Console input uses primary memory (RAM); files use secondary memory.
+    - **Built-in `open()` Function:** `open(filepath, mode)` returns a **file handle** (`_io.TextIOWrapper`) providing methods to interact with the file.
     - **File Modes:**
         - `"r"` — Read (default)
         - `"w"` — Write (creates file, **replaces** existing content)
         - `"a"` — Append (adds to the end, **preserves** existing content)
         - `"b"` — Binary mode (for images, executables)
+    - **Colab Note:** Mount Google Drive with `from google.colab import drive; drive.mount('/content/drive')` to access files.
 
 - **Reading Files:**
-    - **`.read()`** — Reads the entire file.
+    - **`.read()`** — Reads the entire file as a single string.
     - **`.readline()`** — Reads one line (the first line).
     - **`.readlines()`** — Reads all lines into a list.
-    - **Looping:** Use a `for` loop to read specific lines or process line-by-line.
+    - **Looping:** Use a `for` loop with `enumerate()` to read specific lines or process line-by-line with numbering.
 
 - **Writing & Appending Files:**
-    - **Write Mode (`"w"`):** Replaces existing content.
-    - **Append Mode (`"a"`):** Adds new content at the end without erasing.
-    - **Best Practice:** Close files after operations using `.close()`.
+    - **Write Mode (`"w"`):** Replaces existing content; creates a new empty file if it doesn't exist.
+    - **Append Mode (`"a"`):** Adds new content at the end without erasing; creates a new file if it doesn't exist.
+    - **Best Practice:** Use the `with` statement — it automatically closes the file when the block completes, so no explicit `.close()` is needed.
+
+- **Listing Files in a Directory:**
+    - Use `os.listdir(basepath)` to iterate over every item (files, directories).
+    - Use `os.path.isfile(os.path.join(basepath, entry))` to check if a path points to a regular file.
 
 - **Error Handling for File Operations:**
-    - **Problem:** File-not-found errors when the path or filename is incorrect.
+    - **Problem:** `FileNotFoundError` when the path or filename is incorrect.
     - **Solution:** Use `try`/`except` to catch errors and provide a helpful message.
     - **Example:**
       ```python
       try:
-          with open(filepath, "r") as f:
-              content = f.read()
-      except FileNotFoundError:
-          print("File not found. Please check the filename and try again.")
+          fhand = open(filept, "r")
+          content = fhand.read()
+          print(content)
+      except:
+          print('File Not found check again: ', filept)
+          quit()
       ```
-
-- **Introduction to Data Structures — Lists:**
-    - **Definition:** A list is an **ordered, mutable** collection that can contain mixed data types.
-    - **Creation:** `my_list = [1, "apple", 3.14, True]`
-    - **Properties:** Ordered, changeable, allows duplicates, heterogeneous.
-    - **Indexing & Slicing:** Same as strings (zero-based, stop exclusive).
-    - **Common Methods:**
-        - `.append()` — Add one item
-        - `.extend()` — Add multiple items
-        - `.sort()` — Sort the list
-        - `.reverse()` — Reverse the list
-        - `len()` — Count elements
-    - **Concatenation:** Combine lists with `+`.
-    - **Repetition:** Repeat lists with `*`.
-    - **Nested Lists:** Lists can contain other lists.
-
-- **Lists with Loops:**
-    - Use `for` loops to iterate through list elements.
-    - Use `while` loops for index-based iteration.
-
-- **Materials, Recordings & Session Support:**
-    - The facilitator will share session materials and exercises.
-    - Recordings: The facilitator will check with the UNDP team about the best way to share recording links.
-    - Live translation: Being explored to support Arabic-speaking participants.
-    - Session highlights: The facilitator agreed to add key points/highlights to the Teams timeline for a clearer roadmap.
 
 - **My Code & Exercises:** [Link to my Day 3 Notebook](https://colab.research.google.com/drive/1Tu9UNohVNN8d0dFyCV62qMhIZZi32Xyy?usp=sharing)
 
 ---
 
-### Session 4: Python 4 — Dictionaries & Tuples (Sep 21, 2026)
+### Day 4: Session 3 — Data Structures (Sep 17, 2026)
 
 *(This section will be filled out after the session)*
 
@@ -229,7 +211,7 @@ This section is dedicated to my final Capstone project, a requirement for gradua
 
 A huge thank you to the entire team and all the organizers for making this incredible learning opportunity possible.
 
-- **Cristóvăo Cacombe** (UNDP Course Guide) for his excellent instruction and guidance.
+- **[Cristóvăo Cacombe]()** (UNDP Course Guide) for his excellent instruction and guidance.
 - The **UNDP**, the **SDG AI Lab**, and **Damascus University** for creating and delivering this comprehensive program.
 - The **German Federal Ministry for Economic Cooperation and Development (BMZ)** and **KfW** for their generous support.
 - My fellow participants for the collaboration and shared learning journey.
