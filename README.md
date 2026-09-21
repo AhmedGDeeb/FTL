@@ -1,9 +1,3 @@
-Here is a `README.md` file for your GitHub repository. It is structured to be a comprehensive learning journal for the FTL Syria Programme, incorporating all the details from the provided files and your specific requests.
-
-You can copy and paste this directly into a `README.md` file in your new repository.
-
----
-
 # My FTL Syria Programme Journey: AI for Climate
 
 Welcome to my learning journal for the **Frontier Tech Leaders (FTL) Syria Programme – AI for Climate**!
@@ -47,7 +41,7 @@ The program is structured into several key phases. I will update this section as
 
 ## 📚 Session Notes & Key Learnings
 
-This section is my personal knowledge base. I'll add key takeaways from each session here. All code and exercises will be in my main [Colab Notebook](https://colab.research.google.com/drive/1Tu9UNohVNN8d0dFyCV62qMhIZZi32Xyy?usp=sharing).
+This section is my personal knowledge base. I'll add key takeaways from each session here. All code and exercises will be in my main [Colab Notebook](https://colab.research.google.com/github/AhmedGDeeb/FTL/blob/main/tasks/FTL_Tasks_ahmad_deeb.ipynb).
 
 ---
 
@@ -65,7 +59,7 @@ This section is my personal knowledge base. I'll add key takeaways from each ses
     - **Dynamic Typing:** Python automatically determines the type of a variable at runtime.
     - **Expressions and Operators:** Combining values and variables with arithmetic (`+`, `-`, `*`, `/`) and assignment (`=`) operators.
 
-- **My Code & Exercises:** [Link to my Day 1 Notebook](https://colab.research.google.com/drive/1Tu9UNohVNN8d0dFyCV62qMhIZZi32Xyy?usp=sharing)
+- **My Code & Exercises:** [Link to my Day 1 Notebook](https://colab.research.google.com/github/AhmedGDeeb/FTL/blob/main/tasks/FTL_Tasks_ahmad_deeb.ipynb)
 
 ---
 
@@ -91,7 +85,7 @@ This section is my personal knowledge base. I'll add key takeaways from each ses
     - **Example:** `square = lambda x: x ** 2`
     - **Common Use Cases:** Passing a function as an argument (e.g., to `map()`, `filter()`, `sorted()`), inline calculations.
 - **Practice:** We wrote small functions and lambda expressions to solve simple problems (e.g., unit conversions, basic calculations).
-- **My Code & Exercises:** [Link to my Day 2 Notebook](https://colab.research.google.com/drive/1Tu9UNohVNN8d0dFyCV62qMhIZZi32Xyy?usp=sharing)
+- **My Code & Exercises:** [Link to my Day 2 Notebook](https://colab.research.google.com/github/AhmedGDeeb/FTL/blob/main/tasks/FTL_Tasks_ahmad_deeb.ipynb)
 
 ---
 
@@ -181,7 +175,7 @@ This section is my personal knowledge base. I'll add key takeaways from each ses
           quit()
       ```
 
-- **My Code & Exercises:** [Link to my Day 3 Notebook](https://colab.research.google.com/drive/1Tu9UNohVNN8d0dFyCV62qMhIZZi32Xyy?usp=sharing)
+- **My Code & Exercises:** [Link to my Day 3 Notebook](https://colab.research.google.com/github/AhmedGDeeb/FTL/blob/main/tasks/FTL_Tasks_ahmad_deeb.ipynb)
 
 ---
 
@@ -274,7 +268,7 @@ This section is my personal knowledge base. I'll add key takeaways from each ses
         5. Display the total number of guests.
         - **Extensions:** Allow user input for new guests, display guests in order of age, and handle duplicate guest names by prompting to update or skip.
 
-- **My Code & Exercises:** [Link to my Day 4 Notebook](https://colab.research.google.com/drive/1Tu9UNohVNN8d0dFyCV62qMhIZZi32Xyy?usp=sharing)
+- **My Code & Exercises:** [Link to my Day 4 Notebook](https://colab.research.google.com/github/AhmedGDeeb/FTL/blob/main/tasks/FTL_Tasks_ahmad_deeb.ipynb)
 
 ### Day 5: Session 4 – Working with Scientific Data in Python (Sep 21, 2026)
 
