@@ -187,6 +187,97 @@ This section is my personal knowledge base. I'll add key takeaways from each ses
 
 ### Day 4: Session 3 — Data Structures (Sep 17, 2026)
 
+**Key Takeaways:**
+
+- **Data Structures Overview:**
+    - A data structure is a way of storing and organizing data so it can be accessed and updated efficiently.
+    - Classified into **Linear** (lists, tuples) and **Non-linear** (dictionaries).
+
+- **Python Lists:**
+    - **Definition:** Ordered collections that can contain mixed data types. They are similar to arrays in other languages but with more capabilities.
+    - **Properties:**
+        - **Ordered:** Maintain the order of data insertion (e.g., `ordered_list[0]` returns the first item).
+        - **Changeable (Mutable):** Items can be modified after creation (e.g., `ordered_list[0] = 'mango'`).
+        - **Heterogeneous:** Can contain data of different types (e.g., `['apple', 100, 3.14, True, ['sub-list', 'elements']]`).
+        - **Allows Duplicates:** Duplicate data is permitted (e.g., `['apple', 'apple', 'banana', 'cherry', 'banana']`).
+
+- **List Methods:**
+    - **`.append(item)`** — Adds a single item to the end of the list. If the item is a list, it is added as a nested list.
+    - **`.extend(iterable)`** — Adds multiple items from an iterable to the end, flattening them into the list.
+    - **`.sort(reverse=True/False)`** — Sorts the list in place. `reverse=True` sorts in descending order.
+    - **`len(list)`** — Returns the number of items in the list.
+
+- **List Operations:**
+    - **`+` (Concatenation):** Combines two lists into a new list (e.g., `[1, 3, 3] + [4, 4, 6]` = `[1, 3, 3, 4, 4, 6]`).
+    - **`*` (Repetition):** Repeats a list a given number of times (e.g., `[1, 3, 3] * 3` = `[1, 3, 3, 1, 3, 3, 1, 3, 3]`).
+
+- **List Slicing:**
+    - Format: `list[start:end]` — starts at `start` and goes up to, but does **not** include, `end`.
+    - **Negative Slicing:** `numbers[-3:]` returns the last three items.
+    - **Example:** `numbers[2:4]` on `[0, 1, 2, 3, 4, 5]` returns `[2, 3]`.
+
+- **Accessing List Elements:**
+    - Items are identified by their position, starting with `0`.
+    - **Negative Indexing:** `dogs[-1]` returns the last element; `dogs[-2]` returns the second-to-last.
+
+- **Lists and Loops:**
+    - **`for` Loop:** Iterates over each item in the list (e.g., `for dish in dishes: print('I love ' + dish + ' very much')`).
+    - **`enumerate()`:** Tracks the index of each item during iteration (e.g., `for index, dish in enumerate(dishes): print('Dish Number: ' + str(index) + ' ' + dish)`).
+
+- **Lists and Strings:**
+    - **`.split()`** — Breaks a string into a list of words (e.g., `"Python for Everybody".split()` returns `['Python', 'for', 'Everybody']`).
+    - **`.join()`** — Combines a list into a string (e.g., `' '.join(words)` returns `"Python for Everybody"`).
+
+- **Dictionaries:**
+    - **Definition:** Store data values in **key:value** pairs. General syntax: `{key_1: value_1, key_2: value_2}`.
+    - **Characteristics:**
+        - **Keys are unique** — no duplicates allowed.
+        - **No index** — not ordered by position; the key is the default iterator used to retrieve values.
+        - **Mutable (changeable)** — values can be modified (e.g., `fruits_dict['apple'] = 4`).
+        - Accessing a non-existent key raises a **`KeyError`** (e.g., `fruits_dict[0]`).
+
+- **Dictionary Methods:**
+    - **`.keys()`** — Returns all keys (e.g., `dict_keys(['apple', 'oranges', 'mangos'])`).
+    - **`.values()`** — Returns all values (e.g., `dict_values([4, 2, 3])`).
+    - **`.items()`** — Returns all key:value pairs as tuples (e.g., `dict_items([('apple', 4), ('oranges', 2), ('mangos', 3)])`).
+
+- **Common Dictionary Operations:**
+    - **Adding new key-value pairs:** `african_countries['Nigeria'] = 'Abuja'`.
+    - **Modifying values:** `african_countries['Cameroon'] = 'Yaounde'`.
+    - **Removing key-value pairs:** `del african_countries['Cameroon']`.
+    - **Modifying keys:** Two steps — create a new key with the old value, then delete the old key (e.g., `african_countries['Niger'] = african_countries['Nigeria']; del african_countries['Nigeria']`).
+
+- **Dictionaries and Loops:**
+    - **Loop through all key-value pairs:** `for country, capital in african_countries.items():`.
+    - **Loop through all keys:** `for key in my_dict.keys():` (or simply `for key in my_dict:`).
+    - **Loop through all values:** `for value in my_dict.values():`.
+
+- **Tuples:**
+    - **Definition:** Ordered, **immutable** collections — like lists that can never be changed after creation. Can contain mixed data types.
+    - **Creating Tuples:** `sample_tuple = (1, 2, "Python", 3.5)`; convert from a list with `tuple(['Veery', 'Eastern Meadowlark', 10, 25, True])`; blank tuple with `tuple()`.
+    - **Accessing Elements:** Same indexing as lists (e.g., `c_tup[2]` returns `'South Africa'`).
+    - **Slicing:** Same syntax as lists (e.g., `c_tup[1:4]` returns `('Egypt', 'South Africa', 'Ghana')`).
+    - **Converting between Lists and Tuples:** `tuple(sample_list)` and `list(converted_tuple)`.
+    - **Tuples as Return Values:** Functions can return multiple values as a tuple (e.g., `def min_max(numbers): return (min(numbers), max(numbers))`).
+
+- **Dictionaries and Tuples (Advanced):**
+    - **Sorting by key:** `sorted(word_freq.items())`.
+    - **Sorting by value:** `sorted(word_freq.items(), key=lambda item: item[1], reverse=True)` — uses a lambda to select the value for sorting.
+
+- **Assignments:**
+    - **List Assignment (Party):** Maintain a guest list using Python lists — add guests, remove guests, and check who's on the list.
+    - **Advanced Party Guest Manager:** Build a guest management system using dictionaries and tuples:
+        1. Initialize an empty `guests` dictionary where each guest has a name, age, and email.
+        2. Add guests using tuples: `"Alice", 28, "alice@email.com"`, `"Bob", 35, "bob@email.com"`, `"Charlie", 30, "charlie@email.com"`. Use the name as the key and `(age, email)` as the value.
+        3. Update the list: add `"David", 22, "david@email.com"` and remove `"Bob"`.
+        4. Create `get_guest_info(guest_name)` — returns a formatted string if the guest is on the list, otherwise a "not on the guest list" message.
+        5. Display the total number of guests.
+        - **Extensions:** Allow user input for new guests, display guests in order of age, and handle duplicate guest names by prompting to update or skip.
+
+- **My Code & Exercises:** [Link to my Day 4 Notebook](https://colab.research.google.com/drive/1Tu9UNohVNN8d0dFyCV62qMhIZZi32Xyy?usp=sharing)
+
+### Day 5: Session 4 – Working with Scientific Data in Python (Sep 21, 2026)
+
 *(This section will be filled out after the session)*
 
 - **Key Takeaways:**
