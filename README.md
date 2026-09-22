@@ -270,82 +270,240 @@ This section is my personal knowledge base. I'll add key takeaways from each ses
 
 - **My Code & Exercises:** [Link to my Day 4 Notebook](https://colab.research.google.com/github/AhmedGDeeb/FTL/blob/main/tasks/FTL_Tasks_ahmad_deeb.ipynb)
 
-# Day 5: Session 4 — Working with Scientific Data in Python / Intro to OOP (Sep 21, 2026)
+### Day 5: Session 4 — Working with Scientific Data in Python / Intro to OOP (Sep 21, 2026)
 
-## Key Takeaways
+**Key Takeaways**
+1. Course Plan & Capstone Projects
+    - The week includes: continued Python material, a coding session, a ninth session, and a **Wednesday coding challenge**.
+    - **Capstone projects**: Participants can choose their own topics. The instructor will provide optional problem suggestions and guidelines for documenting the problem and proposed solution.
+    - Submission options:
+    - **No GitHub**: Submit a Python notebook or script via email.
+    - **With GitHub**: Upload work and send the link to the instructor.
 
-### 1. Course Plan & Capstone Projects
-- The week includes: continued Python material, a coding session, a ninth session, and a **Wednesday coding challenge**.
-- **Capstone projects**: Participants can choose their own topics. The instructor will provide optional problem suggestions and guidelines for documenting the problem and proposed solution.
-- Submission options:
-  - **No GitHub**: Submit a Python notebook or script via email.
-  - **With GitHub**: Upload work and send the link to the instructor.
+2. Review of Lists, Loops, Dictionaries, Strings & Tuples
+    - **Lists + Loops**: `for` loops iterate over each item in a list.
+    - **`enumerate()`**: Exposes the index of each item during iteration.
+    - **String ↔ List conversion**:
+    - `.split()` — breaks a string into a list of words
+    - `.join()` — combines a list into a string
+    - **Dictionaries**: Key-value collections with unique keys; demonstrated reading, changing, adding, and removing entries.
+    - **Looping through dictionaries**: Process keys, values, or complete key-value pairs.
+    - **Tuples**: Ordered, immutable collections; demonstrated creation, conversion from lists, indexing, slicing, and use for preserving unchangeable values.
 
-### 2. Review of Lists, Loops, Dictionaries, Strings & Tuples
-- **Lists + Loops**: `for` loops iterate over each item in a list.
-- **`enumerate()`**: Exposes the index of each item during iteration.
-- **String ↔ List conversion**:
-  - `.split()` — breaks a string into a list of words
-  - `.join()` — combines a list into a string
-- **Dictionaries**: Key-value collections with unique keys; demonstrated reading, changing, adding, and removing entries.
-- **Looping through dictionaries**: Process keys, values, or complete key-value pairs.
-- **Tuples**: Ordered, immutable collections; demonstrated creation, conversion from lists, indexing, slicing, and use for preserving unchangeable values.
+3. Guest-List Application Demonstration (Abdulrahman Abdulkader)
+    - Presented a guest-list app that:
+    - Separated data operations from command-line display and control logic
+    - Handled empty lists and errors gracefully
+    - Used a **dictionary to map menu choices to functions**
+    - **Function references**: George Al Issa asked how the dictionary referenced functions. Abdulrahman explained that functions are objects whose references can be stored and later invoked through dictionary keys.
 
-### 3. Guest-List Application Demonstration (Abdulrahman Abdulkader)
-- Presented a guest-list app that:
-  - Separated data operations from command-line display and control logic
-  - Handled empty lists and errors gracefully
-  - Used a **dictionary to map menu choices to functions**
-- **Function references**: George Al Issa asked how the dictionary referenced functions. Abdulrahman explained that functions are objects whose references can be stored and later invoked through dictionary keys.
+4. Transition to Object-Oriented Programming (OOP)
+    - OOP helps organize larger programs and prevents code repetition.
+    - **Core terminology**:
+    - **Class**: A template/blueprint defining attributes and behavior
+    - **Attribute**: A variable within a class
+    - **Method**: A function within a class
+    - **Object**: A particular instance of a class
+    - **Constructor**: Runs when an object is created
+    - **Inheritance**: Extending a class to make a new class
+    - **Encapsulation & Abstraction**: Deferred to later sessions
 
-### 4. Transition to Object-Oriented Programming (OOP)
-- OOP helps organize larger programs and prevents code repetition.
-- **Core terminology**:
-  - **Class**: A template/blueprint defining attributes and behavior
-  - **Attribute**: A variable within a class
-  - **Method**: A function within a class
-  - **Object**: A particular instance of a class
-  - **Constructor**: Runs when an object is created
-  - **Inheritance**: Extending a class to make a new class
-  - **Encapsulation & Abstraction**: Deferred to later sessions
+5. Python Objects & Built-In Classes
+    - In Python, **everything is an object**.
+    - Examples:
+    - `type("a")` → `str` class
+    - `type(2.2)` → `float` class
+    - `type(5)` → `int` class
+    - Lists belong to the `list` class
+    - Built-in objects (strings, integers, floats, lists) expose methods defined by their classes.
 
-### 5. Python Objects & Built-In Classes
-- In Python, **everything is an object**.
-- Examples:
-  - `type("a")` → `str` class
-  - `type(2.2)` → `float` class
-  - `type(5)` → `int` class
-  - Lists belong to the `list` class
-- Built-in objects (strings, integers, floats, lists) expose methods defined by their classes.
+6. Creating a Custom Dog Class
+    - Started with an **empty class** using `pass` as a placeholder (Python doesn't allow empty class bodies).
+    - Created an **instance** and checked its type.
+    - Progressed from an empty class to one with attributes and methods.
 
-### 6. Creating a Custom Dog Class
-- Started with an **empty class** using `pass` as a placeholder (Python doesn't allow empty class bodies).
-- Created an **instance** and checked its type.
-- Progressed from an empty class to one with attributes and methods.
+7. Instance Attributes & Methods
+    - **`__init__`**: Constructor method to initialize attributes when a new instance is created.
+    - **`self`**: Represents the individual object/instance.
+    - **Instance attributes**: Belong to each individual object (e.g., a dog's name and age).
+    - **Methods**: Define behavior (e.g., eating, sleeping, barking).
+    - Example: A dog's `tired` state controlled whether it would sleep or play.
 
-### 7. Instance Attributes & Methods
-- **`__init__`**: Constructor method to initialize attributes when a new instance is created.
-- **`self`**: Represents the individual object/instance.
-- **Instance attributes**: Belong to each individual object (e.g., a dog's name and age).
-- **Methods**: Define behavior (e.g., eating, sleeping, barking).
-- Example: A dog's `tired` state controlled whether it would sleep or play.
+8. Class Attributes & Inheritance
+    - **Class attributes**: Defined outside the constructor; shared by all instances of the class (e.g., `species = "canine"`).
+    - Useful for storing constants and values common to all instances.
+    - **Inheritance**: Introduced as a future topic — allows a new class to reuse attributes and behaviors from an existing class.
+    - **Encapsulation and abstraction**: Deferred.
 
-### 8. Class Attributes & Inheritance
-- **Class attributes**: Defined outside the constructor; shared by all instances of the class (e.g., `species = "canine"`).
-- Useful for storing constants and values common to all instances.
-- **Inheritance**: Introduced as a future topic — allows a new class to reuse attributes and behaviors from an existing class.
-- **Encapsulation and abstraction**: Deferred.
-
-### 9. Practice Exercises & Submission Process
-- Instructor shared **class exercises** for participants to complete independently.
-- Exercises will be reviewed at the beginning of the next session.
-- **Submission options** (clarified for Amjad Shekhani):
-  - Email a Python notebook or script
-  - Submit a GitHub link
-- Instructor planned to share materials earlier before future sessions.
+9. Practice Exercises & Submission Process
+    - Instructor shared **class exercises** for participants to complete independently.
+    - Exercises will be reviewed at the beginning of the next session.
+    - **Submission options** (clarified for Amjad Shekhani):
+    - Email a Python notebook or script
+    - Submit a GitHub link
+    - Instructor planned to share materials earlier before future sessions.
 
 
-# Day 6: Session 5 – ... (Sep 22, 2026)
+### Day 6: Session 5 — OOP Continued, Regex & Web Scraping (Sep 22, 2026)
+
+**Key Takeaways**
+
+1. Exercise Distribution & Deadline
+    - Three exercises were emailed to students.
+    - **Deadline extended to Friday, 25 September 2026.**
+    - Submission options:
+    - Jupyter/Colab notebook (.ipynb)
+    - Python script (.py)
+    - GitHub repository
+    - Upload to Google Drive/OneDrive and share the link
+    - If a function is created, show the calling stage in the submission.
+
+2. Evaluation & Peer-Coding
+    - This exercise is part of **continuous evaluation** but is **not shown on the certificate** — it just confirms you pass and continue.
+    - The **hackathon** is the biggest evaluation.
+    - **Peer-coding** will come later (after the hackathon, likely during the data analysis weeks).
+    - Order: individual exercise → hackathon → peer-coding.
+
+3. Exercise Clarifications (from Amjad's questions)
+    - **"List of dictionaries"**: A list containing dictionaries — one dictionary per city with keys `name`, `temperature`, `humidity`, `rainfall`.
+    - Data can be self-created (simple) or from an API/external dataset (optional, not graded higher).
+    - Functions are **optional** unless explicitly mentioned in the exercise.
+    - The missing temperature value is **intentional** — to practice `continue`, count valid observations, and handle incomplete data.
+    - "Valid observations" = cities with a temperature value present.
+    - Temperature classification can be done with an `if` statement inside or outside a function — open to you.
+
+---
+
+**OOP Concepts Continued**
+
+4. Inheritance
+    - A new class (child/subclass) inherits attributes and methods from an existing class (parent/base class).
+    - Benefits: code reuse, extension of existing classes, hierarchy.
+    - Example: `Dog` (parent) → `GoldenRetriever` (child) inherits name, age, tired state, and methods.
+    - In Python, calling parent methods does **not** require `super` — child objects can call inherited methods directly.
+    - (Contrast with Java, where `super.method()` is used.)
+
+5. Encapsulation
+    - Combining data (attributes) and methods inside a class, while **restricting direct access** to internal data.
+    - Python convention: prefix with `_` or `__` for "private" attributes.
+    - `__balance` (double underscore) is name-mangled — not directly accessible.
+    - Access is controlled through **public methods** (e.g., `deposit()`, `check_balance()`).
+    - **Example**: A bank balance — users must deposit through a method, not set the balance directly.
+    - Similar to `private`/`public` in C++.
+
+6. Abstraction
+    - Hiding complex implementation details and exposing only what's necessary.
+    - Uses the `abc` module (`ABC`, `abstractmethod`).
+    - An **abstract base class** cannot be instantiated directly — a subclass must implement the abstract methods.
+    - **Analogy**: Driving a car — you use the steering wheel, brake, and accelerator without knowing how the engine, fuel, or transmission work.
+
+7. Polymorphism
+    - Different classes can use the **same method name** but produce different behavior.
+    - Example: `Animal` (parent) has `speak()`. `Dog.speak()` returns "wolf", `Cat.speak()` returns "meow".
+    - Same method name, different outputs depending on the object's class.
+
+---
+
+**Regular Expressions (Regex)**
+
+8. Introduction to Regex
+    - A pattern (character or sequence) used to **match patterns in text**.
+    - Python module: `re`.
+    - Uses: data cleaning, formatting, extracting emails, phone numbers, URLs, etc.
+    - Regex is case-sensitive by default (as far as the session clarified).
+
+9. `re.search()`
+    - Searches a string for a match and returns the **first match**.
+    - Returns `None` if no match found.
+    - Can be wrapped in an `if` statement to check if a pattern was found.
+    - Can be applied row-by-row to CSV data using a loop.
+
+10. `re.findall()`
+    - Returns a **list of all matches** of the pattern in the string.
+    - Useful for large datasets.
+    - Example: Finding all words that start with "A" and end with "C".
+
+11. Pattern Syntax Discussed
+
+    | Symbol | Meaning |
+    |---|---|
+    | `^` | Start of line |
+    | `$` | End of line |
+    | `.` | Any character |
+    | `\s` | Whitespace |
+    | `\S` | Non-whitespace |
+    | `*` | Zero or more repetitions of the preceding character |
+    | `+` | One or more repetitions |
+    | `?` | Zero or one repetition |
+    | `[abc]` | Any of a, b, or c |
+    | `[^abc]` | Not a, b, or c |
+    | `[a-z]` | Range a to z |
+    | `\d` | Any digit |
+    | `\w` | Any alphanumeric character |
+    | `\W` | Non-alphanumeric |
+
+    - Patterns can be **combined**.
+    - `*` means "zero or more of the character before it" — so `A*C` can match just "C".
+
+---
+
+**Web Scraping**
+12. What is Web Scraping?
+    - Extracting data from websites.
+    - Fetch web page content and analyze/interpret it.
+
+13. HTTP Methods (via `requests` library)
+    | Method | Purpose |
+    |---|---|
+    | `GET` | Retrieve data from a server |
+    | `POST` | Send/create new data on a server |
+    | `PUT` | Update data on a server |
+    | `DELETE` | Delete data from a server |
+
+14. `requests` Library
+    - Used to make HTTP requests.
+    - Example: `requests.get(url)` retrieves web content.
+    - Can use `dir()` to explore available methods.
+
+15. Beautiful Soup
+    - Library for pulling data out of HTML/XML.
+    - Creates a parse tree to extract information.
+    - Example: Extracting the page title.
+    - Works alongside `requests`.
+
+16. Data Formats & APIs
+    - Web data usually comes as **JSON** or **XML**.
+    - **API** = Application Programming Interface — allows applications to communicate and retrieve data over the internet.
+    - APIs provide methods to collect data; detailed API instruction deferred to a later session.
+
+17. Libraries Mentioned for Future Sessions
+    - `pandas` — reading files, data frames
+    - `os` — system operations
+    - `requests` — HTTP requests
+    - `BeautifulSoup` — HTML/XML parsing
+    - `re` — regular expressions
+
+---
+
+**Hackathon Details**
+
+18. Hackathon Overview
+    - **Groups will be assigned** (not chosen by participants).
+    - Group list and directions expected by **Friday 25th or Sunday 27th**.
+    - Theme: **Climate-related problems** — solve with Python (other tools allowed).
+    - All groups present at the end; top groups recognized.
+    - Marking comes from the hackathon presentation.
+    - Python is primary but not exclusive — HTML, other languages, APIs allowed if comfortable.
+    - For the **final project** (biggest one), participants **can choose their own group** — but not for this hackathon.
+
+19. Schedule
+    - **Thursday, 24 Sep**: No session — time to work on exercises.
+    - **Friday, 25 Sep**: Exercise submission deadline.
+    - **Friday/Sunday**: Hackathon groups and directions sent.
+    - **Next week**: Hackathon.
+    - **Later**: Peer-coding during data analysis weeks.
+
+### Day 7: Session 5 – ... (Sep 23, 2026)
 
 *(This section will be filled out after the session)*
 
