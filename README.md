@@ -270,7 +270,82 @@ This section is my personal knowledge base. I'll add key takeaways from each ses
 
 - **My Code & Exercises:** [Link to my Day 4 Notebook](https://colab.research.google.com/github/AhmedGDeeb/FTL/blob/main/tasks/FTL_Tasks_ahmad_deeb.ipynb)
 
-### Day 5: Session 4 – Working with Scientific Data in Python (Sep 21, 2026)
+# Day 5: Session 4 — Working with Scientific Data in Python / Intro to OOP (Sep 21, 2026)
+
+## Key Takeaways
+
+### 1. Course Plan & Capstone Projects
+- The week includes: continued Python material, a coding session, a ninth session, and a **Wednesday coding challenge**.
+- **Capstone projects**: Participants can choose their own topics. The instructor will provide optional problem suggestions and guidelines for documenting the problem and proposed solution.
+- Submission options:
+  - **No GitHub**: Submit a Python notebook or script via email.
+  - **With GitHub**: Upload work and send the link to the instructor.
+
+### 2. Review of Lists, Loops, Dictionaries, Strings & Tuples
+- **Lists + Loops**: `for` loops iterate over each item in a list.
+- **`enumerate()`**: Exposes the index of each item during iteration.
+- **String ↔ List conversion**:
+  - `.split()` — breaks a string into a list of words
+  - `.join()` — combines a list into a string
+- **Dictionaries**: Key-value collections with unique keys; demonstrated reading, changing, adding, and removing entries.
+- **Looping through dictionaries**: Process keys, values, or complete key-value pairs.
+- **Tuples**: Ordered, immutable collections; demonstrated creation, conversion from lists, indexing, slicing, and use for preserving unchangeable values.
+
+### 3. Guest-List Application Demonstration (Abdulrahman Abdulkader)
+- Presented a guest-list app that:
+  - Separated data operations from command-line display and control logic
+  - Handled empty lists and errors gracefully
+  - Used a **dictionary to map menu choices to functions**
+- **Function references**: George Al Issa asked how the dictionary referenced functions. Abdulrahman explained that functions are objects whose references can be stored and later invoked through dictionary keys.
+
+### 4. Transition to Object-Oriented Programming (OOP)
+- OOP helps organize larger programs and prevents code repetition.
+- **Core terminology**:
+  - **Class**: A template/blueprint defining attributes and behavior
+  - **Attribute**: A variable within a class
+  - **Method**: A function within a class
+  - **Object**: A particular instance of a class
+  - **Constructor**: Runs when an object is created
+  - **Inheritance**: Extending a class to make a new class
+  - **Encapsulation & Abstraction**: Deferred to later sessions
+
+### 5. Python Objects & Built-In Classes
+- In Python, **everything is an object**.
+- Examples:
+  - `type("a")` → `str` class
+  - `type(2.2)` → `float` class
+  - `type(5)` → `int` class
+  - Lists belong to the `list` class
+- Built-in objects (strings, integers, floats, lists) expose methods defined by their classes.
+
+### 6. Creating a Custom Dog Class
+- Started with an **empty class** using `pass` as a placeholder (Python doesn't allow empty class bodies).
+- Created an **instance** and checked its type.
+- Progressed from an empty class to one with attributes and methods.
+
+### 7. Instance Attributes & Methods
+- **`__init__`**: Constructor method to initialize attributes when a new instance is created.
+- **`self`**: Represents the individual object/instance.
+- **Instance attributes**: Belong to each individual object (e.g., a dog's name and age).
+- **Methods**: Define behavior (e.g., eating, sleeping, barking).
+- Example: A dog's `tired` state controlled whether it would sleep or play.
+
+### 8. Class Attributes & Inheritance
+- **Class attributes**: Defined outside the constructor; shared by all instances of the class (e.g., `species = "canine"`).
+- Useful for storing constants and values common to all instances.
+- **Inheritance**: Introduced as a future topic — allows a new class to reuse attributes and behaviors from an existing class.
+- **Encapsulation and abstraction**: Deferred.
+
+### 9. Practice Exercises & Submission Process
+- Instructor shared **class exercises** for participants to complete independently.
+- Exercises will be reviewed at the beginning of the next session.
+- **Submission options** (clarified for Amjad Shekhani):
+  - Email a Python notebook or script
+  - Submit a GitHub link
+- Instructor planned to share materials earlier before future sessions.
+
+
+# Day 6: Session 5 – ... (Sep 22, 2026)
 
 *(This section will be filled out after the session)*
 
