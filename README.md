@@ -503,7 +503,81 @@ This section is my personal knowledge base. I'll add key takeaways from each ses
     - **Next week**: Hackathon.
     - **Later**: Peer-coding during data analysis weeks.
 
-### Day 7: Session 5 – ... (Sep 23, 2026)
+### Day 7: Session 6 — Introduction to Databases, SQL & SQLite (Sep 23, 2026)
+
+**Key Takeaways**
+
+1.  **Final Introductory Python Session & Transition to Data Analysis**
+    - This session concluded the introductory Python material.
+    - Future sessions will still use Python but will focus on data-analysis techniques rather than programming fundamentals.
+    - A short assignment is due by **Friday**.
+    - **COSA licenses** will be distributed progressively from **Friday through Monday/Tuesday**. Participants will receive an email notification to log in or create an account.
+    - Participants are encouraged to suggest additional courses that could be added.
+
+2.  **Database Concepts & Data Models**
+    - A **database** is a structured collection of data organized and stored systematically, typically in digital format. It is designed to store, retrieve, add, delete, and update data efficiently.
+    - Benefits: efficiency, reliability, security, recovery, encryption, and backups.
+    - A **data model** is the blueprint or design of a database. It defines how data is organized, stored, and how different pieces relate to each other (e.g., tables, columns, relationships, rules).
+    - Databases solve the problem of storing, updating, and preserving data while avoiding duplication.
+
+3.  **Relational Databases & SQL**
+    - A **relational database** is a collection of one or more tables. Tables store data in rows (records) and columns (fields/attributes).
+    - **SQL (Structured Query Language)** is the language used to communicate with a relational database. It allows you to create, store, retrieve, update, and delete information.
+    - Basic SQL Operations:
+        - `SELECT`: Retrieve data from one or more tables.
+        - `INSERT`: Add new records.
+        - `UPDATE`: Change the content of existing records.
+        - `DELETE`: Remove records or tables.
+    - Filtering data is done using the `WHERE` clause.
+    - Results can be ordered using `ORDER BY` (ascending or descending).
+
+4.  **SQLite & SQLite Browser**
+    - **SQLite** is a lightweight, serverless, zero-configuration relational database. It is ideal for embedded devices and small applications, and is easily compatible with Python.
+    - **SQLite Browser** is a visual, open-source GUI tool used to create, design, edit, and manage SQLite database files. It allows you to run SQL queries, view results, and export data.
+    - Participants can download SQLite tools from the official website, selecting the appropriate version for their operating system and processor architecture (e.g., Windows 32-bit or 64-bit).
+
+5.  **Practical SQL Demonstration**
+    - **Creating a Table:**
+        ```sql
+        CREATE TABLE users (
+            name VARCHAR(128),
+            email VARCHAR(128)
+        );
+        ```
+    - **Inserting Data:**
+        ```sql
+        INSERT INTO users (name, email) VALUES ('John', 'john@example.com');
+        ```
+    - **Retrieving Data:**
+        ```sql
+        SELECT email FROM users WHERE name = 'John';
+        ```
+    - **Updating Data:**
+        ```sql
+        UPDATE users SET email = 'new@example.com' WHERE name = 'John';
+        ```
+    - **Deleting Data:**
+        ```sql
+        DELETE FROM users WHERE name = 'John';
+       ```
+**More Hackathon Details**
+
+6. **Hackathon Structure & Schedule**
+    - **Groups will be assigned** (not chosen by participants).
+    - Group list and directions expected by **Monday**.
+    - Teams will receive members' contact details (name, email, WhatsApp) on Monday to coordinate.
+    - **Theme:** Climate-related problems — solve with Python (other tools allowed).
+    - **Schedule:**
+        - **Monday:** Normal session — receive groups, introduce hackathon, define problem within provided scope.
+        - **Tuesday:** Work independently (no session).
+        - **Wednesday:** Session with another deliverable.
+        - **Thursday:** Final presentations.
+        - **Friday:** Available if additional time is needed.
+    - All groups present at the end; top groups recognized.
+    - Marking comes from the hackathon presentation.
+    - For the **final project** (biggest one), participants **can choose their own group** — but not for this hackathon.
+
+### Day 8: Session 6 – ... (Sep 28, 2026)
 
 *(This section will be filled out after the session)*
 
@@ -529,7 +603,7 @@ This section is dedicated to my final Capstone project, a requirement for gradua
 
 A huge thank you to the entire team and all the organizers for making this incredible learning opportunity possible.
 
-- **[Cristóvăo Cacombe]()** (UNDP Course Guide) for his excellent instruction and guidance.
+- **[Cristóvăo Cacombe](https://www.linkedin.com/in/cristov%C3%A3o-cacombe-0b4514a3/)** (UNDP Course Guide) for his excellent instruction and guidance.
 - The **UNDP**, the **SDG AI Lab**, and **Damascus University** for creating and delivering this comprehensive program.
 - The **German Federal Ministry for Economic Cooperation and Development (BMZ)** and **KfW** for their generous support.
 - My fellow participants for the collaboration and shared learning journey.
