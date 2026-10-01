@@ -577,7 +577,7 @@ This section is my personal knowledge base. I'll add key takeaways from each ses
     - Marking comes from the hackathon presentation.
     - For the **final project** (biggest one), participants **can choose their own group** — but not for this hackathon.
 
-### Day 8: Session 6 – ... (Sep 28, 2026)
+### Day 8: Session 7 – ... (Sep 28, 2026)
 
 *(This section will be filled out after the session)*
 
