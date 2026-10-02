@@ -39,12 +39,12 @@ This project was developed by **Team 4** as part of the **FTL Syria AI4Climate P
 
 | Name | Email | Field | Gender | WhatsApp | Assigned Role |
 |---|---|---|---|---|---|
-| **Abdulrahman Abdulkader** | arakhallak@gmail.com | Computer and Automation Engineering | Man | +963 980 172 126 | Deployment & API |
-| **Ahmad Deeb** | ahmaddeebdev@gmail.com | Electronics and Communications Engineering | Man | +963 960 000 000 | Data Engineering Lead |
-| **aous azzam** | aousazzam2003@gmail.com | Computer and Automation Engineering | Man | 0931690303 | Analysis Lead |
-| **Haya Sukkar** | haya.sukkar3@gmail.com | Electronics and Communications Engineering | Man | +963 931 891 434 | Visualization & Power BI |
-| **Nimra Afzaal** | nimraafzaal1998@gmail.com | Electrical and Power Engineering | Woman | 03094713313 | Domain Research & Coordination |
-| **sular Albalkhi** | sularalbalkhi@gmail.com | Electronics and Communications Engineering | Woman | +963 936 943 700 | Data Engineering Support |
+| **Abdulrahman Abdulkader** | arakhallak@gmail.com | Computer and Automation Engineering | Man | +963980172126 | Deployment & API |
+| **Ahmad Deeb** | ahmaddeebdev@gmail.com | Electronics and Communications Engineering | Man | +963984074032 | Data Engineering Lead |
+| **aous azzam** | aousazzam2003@gmail.com | Computer and Automation Engineering | Man | +963931690303 | Analysis Lead |
+| **Haya Sukkar** | haya.sukkar3@gmail.com | Electronics and Communications Engineering | Woman | +963931891434 | Visualization & Power BI |
+| **Nimra Afzaal** | nimraafzaal1998@gmail.com | Electrical and Power Engineering | Woman | +923094713313 | Domain Research & Coordination |
+| **sular Albalkhi** | sularalbalkhi@gmail.com | Electronics and Communications Engineering | Woman | +963936943700 | Data Engineering Support |
 
 ### Role descriptions
 
