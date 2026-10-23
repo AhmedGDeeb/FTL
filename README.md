@@ -131,11 +131,6 @@ The sessions from the `1 - Applied Python for Engineering & Climate Systems` mod
 
 Of course. Here is the updated version of your learning journal. I have added a new section detailing your experience and project from the Python Hackathon, as requested. This new section is inserted after the "Session Notes & Key Learnings" and before the "Capstone Project" section.
 
-***
-
-## 📚 Session Notes & Key Learnings
-
-*(This section remains unchanged from the previous version.)*
 
 ---
 
@@ -237,6 +232,110 @@ This project was a fantastic opportunity to apply our Python skills to a pressin
 
 ---
 
+Here is the revised section, with a clearer focus on the problem, simpler explanations, and a dedicated team section:
+
+---
+
+## Pair Coding Session
+
+### Day 13: Water Access Analysis
+
+*Session: "Group/Pair Coding Challenge"*
+
+---
+
+#### 👥 Our Team
+
+- Diana
+- Nimra
+- Albert
+- Ahmad
+
+---
+
+#### 🎯 The Problem
+
+A humanitarian program needed to know: **Which community should we visit first to address water shortages?**
+
+We were given a survey dataset (`survey.csv`) containing records from four communities (A, B, C, D). Each record included:
+- `survey_id` — unique identifier for each survey
+- `community` — the community name
+- `households` — number of households represented
+- `days_without_water` — how many days that household went without water
+- `latitude` / `longitude` — location coordinates
+
+The data was messy. It had duplicates, missing values, and invalid entries (like "unknown" for households and "8" for days without water). Our job was to clean it, apply validation rules, and calculate which community had the highest percentage of households facing at least 3 days without water.
+
+---
+
+#### 🧹 How We Cleaned the Data
+
+We applied these rules step by step:
+
+| Rule | What We Did |
+|------|-------------|
+| **One record per survey** | Removed duplicate rows using `drop_duplicates()` |
+| **Households must be positive whole numbers** | Converted to numeric with `pd.to_numeric(errors='coerce')`, filled missing values with the median, and rounded to whole numbers |
+| **Days without water must be 0–7** | Clipped values below 0 to 0 and above 7 to 7 |
+| **Exclude invalid records** | Kept only complete records in `df_clean`, but saved the original data for review |
+
+After cleaning, we had **10 valid records** across the four communities.
+
+---
+
+#### 📊 What We Calculated
+
+For each community, we calculated:
+
+1. **Total households represented** — sum of households per community
+2. **Households with ≥3 days without water** — counted only those where `days_without_water >= 3`
+3. **Percentage affected** — (affected households ÷ total households) × 100
+
+**Results:**
+
+| Community | Total Households | Affected Households | % Affected | Avg. Days Without Water |
+|-----------|-----------------|---------------------|------------|-------------------------|
+| Community B | 40 | 40 | **100%** | 5.0 |
+| Community D | 30 | 30 | **100%** | 5.5 |
+| Community A | 30 | 20 | 66.7% | 3.0 |
+| Community C | 30 | 10 | 33.3% | 1.67 |
+
+We visualized this with a bar chart comparing the percentages side by side.
+
+---
+
+#### 🏆 Our Recommendation
+
+**Visit Community D first, then Community B.**
+
+**Why?**
+- Both communities had **100% of households** reporting at least 3 days without water.
+- They were tied, so we used **severity** as a tie-breaker: Community D averaged **5.5 days** without water, while Community B averaged **5.0 days**.
+- Community A (66.7%) is a secondary concern.
+- Community C (33.3%) needs no urgent follow-up.
+
+---
+
+#### 📝 Data Collection Lesson
+
+We proposed two simple validation rules for future survey forms to prevent these errors:
+
+1. **Households field:** Only allow positive whole numbers (no text like "unknown").
+2. **Days without water field:** Only allow whole numbers from 0 to 7 (no 8 or higher).
+
+These rules would catch bad data at the source and save hours of cleaning later.
+
+---
+
+#### 🛠️ Tools We Used
+
+`pd.read_csv()`, `pd.to_numeric()`, `duplicated()`, `drop_duplicates()`, `groupby()`, `agg()`, and `matplotlib` for the bar chart.
+
+---
+
+This session showed us how messy real-world data can be—and how a structured cleaning process and clear visualization can turn chaos into a clear, actionable recommendation.
+
+---
 
 ## 🎓 Capstone Project: [Project Title Placeholder]
 
