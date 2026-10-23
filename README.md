@@ -24,9 +24,9 @@ The program is structured into several key phases. I will update this section as
 | Phase / Module | Status | Key Topics |
 | :--- | :---: | :--- |
 | **Python Bootcamp** | ✅ **Done** | Python syntax, Data Types, Variables, Operators, Control Flow, Functions |
-| **Python Hackathon** | ✅ Not Started | Group-based problem solving and presentation |
+| **Python Hackathon** | ✅ **Done** | Group-based problem solving and presentation |
 | **Data Analysis & SDG** | 🔄 **In Progress** | Data manipulation, analysis techniques, peer coding |
-| **Applied Machine Learning** | ⏳ Not Started | Regression, Classification, Clustering, Model Development |
+| **Applied Machine Learning** | 🔄 **In Progress** | Regression, Classification, Clustering, Model Development |
 | **Applied Dev & Deployment** | ⏳ Not Started | Git, GitHub, Command Line, Docker, APIs, Model Integration |
 | **Specialized Sessions** | ⏳ Not Started | Cybersecurity, AI Security, AI for Climate, Smart Grids |
 | **Capstone Project** | ⏳ Not Started | Literature review, Problem statement, Model development, Final Presentation |
@@ -336,6 +336,66 @@ These rules would catch bad data at the source and save hours of cleaning later.
 This session showed us how messy real-world data can be—and how a structured cleaning process and clear visualization can turn chaos into a clear, actionable recommendation.
 
 ---
+
+## Applied Machine Learning
+
+## Applied Machine Learning
+
+### Day 14: Linear Regression
+
+- **The model:** `f(x) = w*x + b` — `w` (weight/slope) measures how much the prediction changes as the input changes; `b` (bias/intercept) is the predicted value when `x = 0`. `ŷ` is the model's prediction.
+- **Univariate linear regression:** Linear regression with one variable — fitting a line through data (e.g., house size vs. price). The model is written `f_{w,b}(x) = wx + b`.
+- **Notation:** `x` = input feature, `y` = output target, `m` = number of training examples, `(x, y)` = single training example, `(x⁽ⁱ⁾, y⁽ⁱ⁾)` = i-th training example.
+- **Prediction errors:** For each example, error = prediction − actual (`ŷ⁽ⁱ⁾ − y⁽ⁱ⁾`). Squaring prevents positive and negative errors from cancelling out and gives larger errors more influence.
+- **Cost function (MSE):** `J(w,b) = (1/2m) Σᵢ₌₁ᵐ (wx⁽ⁱ⁾ + b − y⁽ⁱ⁾)²`. The factor `1/2` makes derivatives simpler and does not change which parameters minimise the cost.
+- **Worked example:** With three points and a line `f(x) = 0.5x` (or similar), the cost is computed as `J(w,b) = (1/(2×3)) × ((1.5−1)² + (4−2)² + (2−2.5)²) = 0.75`.
+- **Comparing candidate lines:** Different `(w, b)` pairs produce different lines; each line has its own cost. The cost function gives one number to summarise how well each line fits all the examples and to objectively compare them.
+- **Visualising the cost function:** The cost surface over `(w, b)` is bowl-shaped (convex for linear regression), with a unique global minimum. Cross-sections show the cost as a function of one parameter while holding the other fixed.
+- **How to represent f:** The hypothesis is the linear function `f_{w,b}(x) = wx + b`; fitting means finding the `w, b` that minimise the cost.
+- **From slides:** Examples of lines with different `w, b` — `w = 0, b = 1.5` (horizontal), `w = 0.5, b = 0` (through origin), `w = 0.5, b = 1` (shifted up) — showing how slope and intercept change the fit.
+
+---
+
+### Day 15: Regression Evaluation
+
+- **Cost function recap:** `J(w,b) = (1/2m) Σ(prediction − actual)²`. It averages squared errors across all examples and penalises large errors more heavily.
+- **Gradient descent outline:** (1) Initialise parameters; (2) calculate the gradient of the loss with respect to each parameter (points in the direction of steepest increase); (3) update parameters by a small amount opposite the gradient; (4) repeat, each time moving closer to the minimum.
+- **Gradients for linear regression:**
+  - `∂J/∂w = (1/m) Σᵢ₌₁ᵐ (wx⁽ⁱ⁾ + b − y⁽ⁱ⁾) x⁽ⁱ⁾`
+  - `∂J/∂b = (1/m) Σᵢ₌₁ᵐ (wx⁽ⁱ⁾ + b − y⁽ⁱ⁾)`
+  - The slope gradient includes `x` because changing `w` affects predictions in proportion to `x`; the intercept gradient is the average prediction error.
+- **Update rule:** `w := w − α·∂J/∂w`, `b := b − α·∂J/∂b`, where `α` is the learning rate.
+- **Simultaneous update:** Calculate both gradients from the same old values of `w` and `b`, then update both parameters together. Updating one first and using the new value to compute the other gradient is incorrect.
+- **Learning rate (`α`):** Controls step size. Too small → cost decreases very slowly; reasonable → cost decreases steadily; too large → cost may oscillate or diverge. Near a local minimum, the derivative becomes smaller, so update steps naturally become smaller — a fixed learning rate can reach the minimum.
+- **Positive vs. negative slope:** On the right of the minimum the slope is positive, so subtracting `α·gradient` moves `w` left (downhill); on the left the slope is negative, so subtracting moves `w` right (downhill).
+- **Local vs. global minima:** Non-convex cost surfaces can have local minima, maxima and a global minimum. Techniques to escape local minima include adding noise, momentum, and learning-rate adjustment. For linear regression, MSE is convex, so gradient descent converges to the global minimum.
+- **Batch gradient descent:** Each step uses all training examples. Cost decreases smoothly. One update = one iteration.
+- **Stochastic gradient descent (SGD):** Each update uses a single observation; cost shows many variations but can be faster per step.
+- **Mini-batch gradient descent:** Each update uses a subset of the data; cost is smoother than SGD and can be more efficient than batch.
+- **Comparison:** Batch = entire dataset per update, smooth cost curve; SGD = single observation per update, noisy cost curve; mini-batch = subset per update, smoother than SGD.
+- **Feature scaling for numerical stability:** Raw feature magnitudes (e.g., house sizes in square feet ~2000) make gradients very large. Rescaling (e.g., thousands of square feet) keeps steps reasonable. This changes the units of the slope, not the underlying relationship.
+- **One update step-by-step:** From `w=0, b=0`, `α=0.1`: compute `∂J/∂w`, `∂J/∂b` from old values, compute new `w`, `b`, then compare cost before and after — the cost should decrease.
+- **Cost during training:** A falling cost curve indicates the cost is getting smaller; a plateau indicates convergence.
+- **Evaluating the fitted line:** Compare the learned line with observations; inspect the cost curve; examine the gradient descent path on cost contours.
+- **Evaluation metrics:** MAE (average absolute error, in target units), RMSE (square root of average squared error; penalises large errors more), R² (compares model against predicting the mean; can be negative on test data). Lower MAE and RMSE are generally better; interpret all metrics in the context of the intended decision.
+- **Baseline comparison:** Always compare a trained model against a simple reference (e.g., predicting the training mean) to judge whether the model is useful.
+- **Prediction for new inputs:** Apply the learned `w, b` to a new `x`; report in original units (e.g., house size × 1000, price × 1000 USD).
+
+---
+
+### Day 16: Classification Fundamentals
+
+- **Regression vs. classification:** Regression predicts a numerical quantity (`ŷ ∈ ℝ`, e.g., daily energy generation = 145.7 kWh). Classification predicts membership in a category (binary `y ∈ {0,1}`, multiclass `y ∈ {1…K}`, e.g., land-cover class = cropland).
+- **Evaluation measures:** Regression uses MAE, RMSE; classification uses precision, recall, F1, accuracy.
+- **Classification examples:** Cancer detection (tumour size → malignant/benign); land-cover classification from satellite imagery. A classifier may output class scores or probabilities before applying a decision rule.
+- **Binary classification:** Two classes (e.g., 0 = benign, 1 = malignant). The model learns a decision boundary.
+- **Multiclass classification:** More than two classes (`y ∈ {1, 2, …, K}`), e.g., multiple land-cover types.
+- **Two or more inputs:** With two features (`x₁`, `x₂`), the decision boundary is a line in 2D space; with more features it becomes a plane or hyperplane. Example: tumour size and age → malignant/benign.
+- **Supervised learning with labelled data:** The model is trained on labelled examples (shapes with class labels) and predicts labels for test data (e.g., circle, triangle, square classification).
+- **Classification workflow:** Provide labelled examples → generate predictions → measure disagreement → adjust the model → evaluate on separate examples (same as supervised training process).
+- **Important consideration:** A classifier's output may be a probability; a decision threshold converts it to a class. Threshold choice trades off precision and recall.
+- **Connection to climate:** Classification supports land-cover mapping, event detection, and risk categorisation (e.g., high-rainfall day vs. normal day).
+
 
 ## 🎓 Capstone Project: [Project Title Placeholder]
 
