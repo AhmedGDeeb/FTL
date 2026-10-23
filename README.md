@@ -24,7 +24,7 @@ The program is structured into several key phases. I will update this section as
 | Phase / Module | Status | Key Topics |
 | :--- | :---: | :--- |
 | **Python Bootcamp** | ✅ **Done** | Python syntax, Data Types, Variables, Operators, Control Flow, Functions |
-| **Python Hackathon** | ⏳ Not Started | Group-based problem solving and presentation |
+| **Python Hackathon** | ✅ Not Started | Group-based problem solving and presentation |
 | **Data Analysis & SDG** | ⏳ Not Started | Data manipulation, analysis techniques, peer coding |
 | **Applied Machine Learning** | ⏳ Not Started | Regression, Classification, Clustering, Model Development |
 | **Applied Dev & Deployment** | ⏳ Not Started | Git, GitHub, Command Line, Docker, APIs, Model Integration |
@@ -128,6 +128,76 @@ The sessions from the `1 - Applied Python for Engineering & Climate Systems` mod
 - **`Day_1.3.ipynb` Summary:** The focus of this notebook was on working with text data (strings) and data collections (lists, tuples, dictionaries). Exercises involved string slicing, cleaning, and parsing, such as extracting usernames from email addresses and checking for palindromes. We also practiced using list methods like `.append()` and `.sort()`, and explored dictionary operations for storing and retrieving key-value data, such as creating a simple word frequency counter.
 
 - **`Day_1.4.ipynb` Summary:** This session bridged data manipulation with the program's climate theme. The coding exercises involved using lists and dictionaries to model and analyze simple climate-related datasets. For example, we calculated averages from a list of temperatures, processed a list of dictionaries containing city climate data, and used loops to filter datasets based on conditions. This practical work reinforced the application of core Python skills to engineering and environmental problems.
+
+Of course. Here is the updated version of your learning journal. I have added a new section detailing your experience and project from the Python Hackathon, as requested. This new section is inserted after the "Session Notes & Key Learnings" and before the "Capstone Project" section.
+
+***
+
+## 📚 Session Notes & Key Learnings
+
+*(This section remains unchanged from the previous version.)*
+
+---
+
+### Day 8: Python Bootcamp – Hands-On Coding
+*Session: "Applied Python for Engineering & Climate Systems"*
+
+The sessions from the `1 - Applied Python for Engineering & Climate Systems` module provided extensive hands-on practice. A summary of the practical coding tasks from the provided notebooks is below.
+
+- **`Day_1.1.ipynb` Summary:** This session focused on the fundamental building blocks of Python. The exercises involved creating variables of different data types (strings, integers, floats) and using the `type()` function to inspect them. We practiced using arithmetic operators, creating simple expressions, and assigning results to new variables. The notebooks also served as an introduction to Colab's environment.
+
+- **`Day_1.2.ipynb` Summary:** This session moved beyond simple variables to more complex data structures and control flow. The exercises focused on writing functions with parameters, returning values, and understanding variable scope. We implemented logic using `if/elif/else` statements to make decisions and used `for` and `while` loops to iterate over data, performing calculations and counting operations. The practice included creating a simple calculator function and a vowel counting utility.
+
+- **`Day_1.3.ipynb` Summary:** The focus of this notebook was on working with text data (strings) and data collections (lists, tuples, dictionaries). Exercises involved string slicing, cleaning, and parsing, such as extracting usernames from email addresses and checking for palindromes. We also practiced using list methods like `.append()` and `.sort()`, and explored dictionary operations for storing and retrieving key-value data, such as creating a simple word frequency counter.
+
+- **`Day_1.4.ipynb` Summary:** This session bridged data manipulation with the program's climate theme. The coding exercises involved using lists and dictionaries to model and analyze simple climate-related datasets. For example, we calculated averages from a list of temperatures, processed a list of dictionaries containing city climate data, and used loops to filter datasets based on conditions. This practical work reinforced the application of core Python skills to engineering and environmental problems.
+
+---
+
+## 🚀 Python Hackathon: FTL Syria AI4Climate
+
+[Full details](hackathon\idea.md)
+
+The Python Hackathon was a four-day intensive challenge where teams used Python and climate-related data to investigate a real-world environmental problem. Our project, **Syria WheatWatch**, was developed for this event.
+
+### The Challenge: Syria WheatWatch
+
+The 2024–2025 drought was Syria's worst in nearly four decades, causing rainfall to drop over 50% below average and wheat production to collapse to 900,000 tonnes. This created a 3 million tonne deficit and pushed millions into food insecurity. Our team set out to build an open, reproducible early-warning tool to analyze how rainfall and solar variability have affected Syrian wheat production between 1991 and 2025.
+
+**Our Team (Team 4):** Haya Sukkar, Nimra Afzaal, Sular Albalkhi, Abdulrahman Abdulkader, Ahmad Deeb, and Aous Azzam.
+
+### What We Built
+
+Our project, **Syria WheatWatch**, is a full data pipeline and predictive tool:
+
+- **📊 Data Pipeline:** A Python pipeline that merges 34 years of data from **NASA POWER** (solar irradiance), **HDX** (rainfall), and **FAOSTAT** (crop production).
+- **📈 Analysis & Modeling:** We performed correlation and regression analysis. Our key finding was that **climate variability drives crop yield, not planted area**. A linear regression model we developed can predict wheat yield from rainfall and solar inputs (cross-validated R² ≈ 0.35).
+- **🚀 Public API & Web Service:** We deployed our model as a public **FastAPI** web service with a JSON API, allowing anyone to get yield predictions for given climate conditions.
+- **📉 Interactive Dashboard:** We created a **Power BI dashboard** for exploring historical drought severity and production trends.
+
+### Key Findings
+
+The project's core insight is that climate variability impacts wheat production through the **yield channel**, not the **area channel**:
+
+- **Climate-driven:** Wheat **yield** (per-hectare output) is strongly correlated with rainfall (r = +0.54) and solar irradiance (r = -0.65).
+- **Not climate-driven:** Planted **area** has no significant correlation with rainfall (r = 0.13) or solar (r = -0.11). It is primarily influenced by conflict, policy, and economic factors.
+
+This distinction is critical for early warning: it tells us to monitor weather to predict yield, and to monitor policy and conflict to predict planting decisions.
+
+### Project Deliverables
+
+- **🐍 Python Notebook:** The full analysis from data cleaning to modeling is documented in our notebooks.
+- **📂 Dataset:** The raw and cleaned datasets are available in the repository.
+- **📄 Presentation:** Our final 7-slide presentation is included.
+- **📝 Project Summary:** A detailed README file explains the project.
+- **🔗 Public Links:**
+    - **Live API & Web Interface:** [https://syria-wheat-api.onrender.com/](https://syria-wheat-api.onrender.com/)
+    - **Full Code Repository:** [Link to the GitHub Repo](https://lnkd.in/e36a6yda)
+
+This project was a fantastic opportunity to apply our Python skills to a pressing humanitarian challenge. We are grateful to the FTL team, our instructor Cristóvão Cacombe, and the open data providers (NASA, HDX, FAO) for making this work possible. A summary of our journey and impact was also shared on [LinkedIn](https://lnkd.in/p/eyWnace7).
+
+---
+
 
 
 ## 🎓 Capstone Project: [Project Title Placeholder]
