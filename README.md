@@ -25,7 +25,7 @@ The program is structured into several key phases. I will update this section as
 | :--- | :---: | :--- |
 | **Python Bootcamp** | ✅ **Done** | Python syntax, Data Types, Variables, Operators, Control Flow, Functions |
 | **Python Hackathon** | ✅ Not Started | Group-based problem solving and presentation |
-| **Data Analysis & SDG** | ⏳ Not Started | Data manipulation, analysis techniques, peer coding |
+| **Data Analysis & SDG** | 🔄 **In Progress** | Data manipulation, analysis techniques, peer coding |
 | **Applied Machine Learning** | ⏳ Not Started | Regression, Classification, Clustering, Model Development |
 | **Applied Dev & Deployment** | ⏳ Not Started | Git, GitHub, Command Line, Docker, APIs, Model Integration |
 | **Specialized Sessions** | ⏳ Not Started | Cybersecurity, AI Security, AI for Climate, Smart Grids |
@@ -198,6 +198,44 @@ This project was a fantastic opportunity to apply our Python skills to a pressin
 
 ---
 
+## Data Analysis & SDG
+
+### Day 9: Introduction to Data in Data Science
+*Session: "Data and Data Collection"*
+
+- **What is Data?:** We explored the definition of data as raw, unprocessed facts and observations. The session emphasized that data's true value emerges only when it is processed, interpreted, and applied effectively to generate insights and support decision-making.
+- **The Role of Data:** We discussed how data is used across different domains—businesses optimize operations, researchers address societal challenges, and policymakers develop evidence-based strategies. This reinforced the program's goal of using data to tackle climate and environmental issues.
+
+---
+
+### Day 10: Data Quality Characteristics
+*Session: "Data and Data Collection"*
+
+- **Key Quality Dimensions:** We learned that high-quality data must be **accurate**, **complete**, **consistent**, **timely**, and **relevant**. Poor data quality can lead to biased or incorrect conclusions, making validation a critical step.
+- **Impact on Analysis:** The session highlighted that understanding data quality is essential before any modeling or analysis. Identifying issues early prevents compounding errors and ensures that insights are reliable and actionable.
+
+---
+
+### Day 11: Common Data Formats
+*Session: "Data and Data Collection"*
+
+- **CSV (Comma-Separated Values):** A simple, tabular format ideal for spreadsheets and many data analysis tools. Best for structured, flat data.
+- **JSON (JavaScript Object Notation):** A hierarchical, nested format commonly used in web APIs and for semi-structured data.
+- **XML (eXtensible Markup Language):** A structured format for data exchange, useful when data requires a strict schema.
+- **Pickle:** A Python-specific format for serializing and de-serializing Python objects, ideal for saving models or complex data structures.
+- **Choosing the Right Format:** We discussed how the choice of format depends on the data's structure, the tools being used, and the need for compatibility with other systems.
+
+---
+
+### Day 12: Web Scraping, Data Privacy & Ethics
+*Session: "Data and Data Collection"*
+
+- **HTTP Requests & Parsing:** We learned to use the **`requests`** library to fetch web pages and **BeautifulSoup** to parse HTML content, navigate the document tree, and extract specific data elements like tables, links, and text.
+- **Ethical and Legal Considerations:** The session emphasized the importance of respecting `robots.txt`, website terms of service, and copyright laws. We discussed the responsibility of scraping only public data and avoiding excessive requests that could disrupt services.
+- **GDPR and Data Protection:** We covered the General Data Protection Regulation (GDPR) and its principles, including lawful processing, data minimization, and user consent. The session highlighted the importance of protecting personal data and ensuring transparency.
+- **Ethical Data Handling:** Beyond legal compliance, we discussed the ethical responsibilities of data scientists—avoiding bias, ensuring fairness, and being transparent about data sources and methods.
+
+---
 
 
 ## 🎓 Capstone Project: [Project Title Placeholder]
