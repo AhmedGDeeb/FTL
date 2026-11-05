@@ -25,9 +25,9 @@ The program is structured into several key phases. I will update this section as
 | :--- | :---: | :--- |
 | **Python Bootcamp** | ✅ **Done** | Python syntax, Data Types, Variables, Operators, Control Flow, Functions |
 | **Python Hackathon** | ✅ **Done** | Group-based problem solving and presentation |
-| **Data Analysis & SDG** | 🔄 **In Progress** | Data manipulation, analysis techniques, peer coding |
+| **Data Analysis & SDG** | ✅ **Done** | Data manipulation, analysis techniques, peer coding |
 | **Applied Machine Learning** | 🔄 **In Progress** | Regression, Classification, Clustering, Model Development |
-| **Applied Dev & Deployment** | ⏳ Not Started | Git, GitHub, Command Line, Docker, APIs, Model Integration |
+| **Applied Dev & Deployment** | 🔄 **In Progress** | Git, GitHub, Command Line, Docker, APIs, Model Integration |
 | **Specialized Sessions** | ⏳ Not Started | Cybersecurity, AI Security, AI for Climate, Smart Grids |
 | **Capstone Project** | ⏳ Not Started | Literature review, Problem statement, Model development, Final Presentation |
 | **Professional Certifications**| ⏳ Not Started | Power Systems, Wireless Networking, IoT, Climate Monitoring |
@@ -131,21 +131,6 @@ The sessions from the `1 - Applied Python for Engineering & Climate Systems` mod
 
 Of course. Here is the updated version of your learning journal. I have added a new section detailing your experience and project from the Python Hackathon, as requested. This new section is inserted after the "Session Notes & Key Learnings" and before the "Capstone Project" section.
 
-
----
-
-### Day 8: Python Bootcamp – Hands-On Coding
-*Session: "Applied Python for Engineering & Climate Systems"*
-
-The sessions from the `1 - Applied Python for Engineering & Climate Systems` module provided extensive hands-on practice. A summary of the practical coding tasks from the provided notebooks is below.
-
-- **`Day_1.1.ipynb` Summary:** This session focused on the fundamental building blocks of Python. The exercises involved creating variables of different data types (strings, integers, floats) and using the `type()` function to inspect them. We practiced using arithmetic operators, creating simple expressions, and assigning results to new variables. The notebooks also served as an introduction to Colab's environment.
-
-- **`Day_1.2.ipynb` Summary:** This session moved beyond simple variables to more complex data structures and control flow. The exercises focused on writing functions with parameters, returning values, and understanding variable scope. We implemented logic using `if/elif/else` statements to make decisions and used `for` and `while` loops to iterate over data, performing calculations and counting operations. The practice included creating a simple calculator function and a vowel counting utility.
-
-- **`Day_1.3.ipynb` Summary:** The focus of this notebook was on working with text data (strings) and data collections (lists, tuples, dictionaries). Exercises involved string slicing, cleaning, and parsing, such as extracting usernames from email addresses and checking for palindromes. We also practiced using list methods like `.append()` and `.sort()`, and explored dictionary operations for storing and retrieving key-value data, such as creating a simple word frequency counter.
-
-- **`Day_1.4.ipynb` Summary:** This session bridged data manipulation with the program's climate theme. The coding exercises involved using lists and dictionaries to model and analyze simple climate-related datasets. For example, we calculated averages from a list of temperatures, processed a list of dictionaries containing city climate data, and used loops to filter datasets based on conditions. This practical work reinforced the application of core Python skills to engineering and environmental problems.
 
 ---
 
@@ -396,6 +381,22 @@ This session showed us how messy real-world data can be—and how a structured c
 - **Important consideration:** A classifier's output may be a probability; a decision threshold converts it to a class. Threshold choice trades off precision and recall.
 - **Connection to climate:** Classification supports land-cover mapping, event detection, and risk categorisation (e.g., high-rainfall day vs. normal day).
 
+
+
+## Applied Dev & Deployment
+
+### Day 17: Git & GitHub
+
+*Session: "Version Control with Git & GitHub"*
+
+- **Why version control:** Git tracks changes to files over time, letting you review history, revert mistakes, and collaborate without overwriting each other's work. GitHub is the remote hosting platform built on top of Git.
+- **Core Git concepts:** **Repository** (a project tracked by Git), **commit** (a snapshot of changes with a message), **branch** (an independent line of development), **remote** (a hosted copy, e.g., on GitHub), and **working directory / staging area / local repo** as the three states a file moves through.
+- **Essential commands:** `git init` (start a repo), `git clone` (copy a remote repo), `git status` (see what's changed), `git add` (stage changes), `git commit -m "message"` (save a snapshot), `git push` (upload to remote), `git pull` (fetch and merge remote changes), and `git log` (view history).
+- **Branching & merging:** Created branches with `git branch` / `git checkout -b`, made commits on the branch, then merged back into `main`. Discussed merge conflicts — what causes them and how to resolve them manually.
+- **Working with remotes:** Connected a local repo to GitHub with `git remote add origin`, pushed with `git push -u origin main`, and pulled collaborators' changes before pushing to avoid conflicts.
+- **Pull requests:** Opened a PR on GitHub to propose changes, reviewed the diff, and merged it — reinforcing the collaborative workflow used by teams and open-source projects.
+- **Best practices:** Write clear, imperative commit messages; commit small, logical changes frequently; pull before you push; never commit secrets or large data files; use `.gitignore` to exclude notebooks' checkpoints, virtual environments, and sensitive files.
+- **Practical application:** Initialized and pushed my own FTL learning journal repository to GitHub, applying these commands end to end — which is how this README is version-controlled and shared.
 
 ## 🎓 Capstone Project: [Project Title Placeholder]
 
