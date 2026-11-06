@@ -381,6 +381,54 @@ This session showed us how messy real-world data can be—and how a structured c
 - **Important consideration:** A classifier's output may be a probability; a decision threshold converts it to a class. Threshold choice trades off precision and recall.
 - **Connection to climate:** Classification supports land-cover mapping, event detection, and risk categorisation (e.g., high-rainfall day vs. normal day).
 
+---
+
+### Day 18: Classification & Model Evaluation
+*Session: "Supervised Machine Learning: Classification & Evaluation"*
+
+- **Regression vs. Classification:** While regression predicts a numerical quantity (e.g., rainfall amount in mm), classification predicts a category or class. We explored **Binary Classification** (e.g., predicting a "wet day" vs. "dry day" based on a rainfall threshold of 1.0 mm) and **Multiclass Classification** (e.g., predicting land-cover classes like water, soil, or vegetation).
+- **Logistic Regression:** Despite its name, this is a classification algorithm. It calculates a linear score (`z = w·x + b`) and passes it through the **sigmoid function** `g(z) = 1 / (1 + e^-z)` to output a probability between 0 and 1.
+- **Decision Boundaries:** The model converts probabilities into classes using a **threshold** (defaulting to 0.5). The boundary is where the probability equals the threshold. We learned that for linearly separable data, this boundary is a straight line (or hyperplane), but non-linear boundaries can be created using polynomial features (e.g., `x₁² + x₂² - 2 = 0` for a circular boundary).
+- **Logistic Regression Cost Function:** Instead of Mean Squared Error (which creates a non-convex cost function with many local minima for logistic regression), we use the **Log Loss (Cross-Entropy)** function. It heavily penalizes confident but wrong predictions, ensuring a convex cost surface that gradient descent can optimize effectively.
+- **Evaluating Classification:** We moved beyond simple accuracy (which can be misleading on imbalanced datasets) and learned to use the **Confusion Matrix**:
+  - **True Positives (TP)** & **True Negatives (TN)**: Correct predictions.
+  - **False Positives (FP)**: "False alarms."
+  - **False Negatives (FN)**: Missed events.
+- **Key Metrics:** 
+  - **Accuracy:** Overall proportion of correct predictions.
+  - **Precision:** Of the predicted positive cases, how many were actually positive? (Reliability of alerts).
+  - **Recall:** Of the actual positive cases, how many did we detect? (Ability to catch events).
+  - **F1-Score:** The harmonic mean of precision and recall, balancing the two.
+- **Threshold Tuning in Climate Context:** We discussed how the 0.5 threshold isn't always optimal. For drought-stress early warning, a **lower threshold** might be used to increase *recall* (catching all potential droughts), even if it means dealing with more *false positives*.
+
+---
+
+### Day 19: Decision Trees & Random Forests
+*Session: "Tree-Based Models"*
+
+- **Decision Trees:** Introduced as a non-linear, highly interpretable supervised learning algorithm. They work by recursively splitting the data based on feature values to maximize the purity of the resulting subsets (using metrics like **Gini Impurity** or **Entropy/Information Gain**).
+- **Fitting Problems (Overfitting vs. Underfitting):** A major focus of the session.
+  - **Underfitting:** The model is too simple (e.g., a straight line through non-linear data). High bias.
+  - **Right Fit:** The model captures the underlying trend without memorizing the noise. 
+  - **Overfitting:** The model is too complex (e.g., a high-degree polynomial or a very deep tree) and learns the training noise, resulting in low training error but high test error. High variance.
+- **Regularization:** Techniques to prevent overfitting. For linear models, this involves adding a penalty to the cost function. For trees, it involves setting limits like `max_depth`, `min_samples_split`, or `min_samples_leaf`.
+- **Random Forests:** Because single decision trees are prone to overfitting, we learned about **Ensemble Learning**. A Random Forest builds hundreds of decision trees using random subsets of data (Bagging) and random subsets of features. The final prediction is the average (for regression) or majority vote (for classification) of all trees, drastically reducing variance and overfitting.
+- **Feature Importance:** Trees and forests allow us to easily extract which features (e.g., humidity, temperature, soil moisture) contributed most to the predictions, which is highly valuable for climate scientists.
+
+---
+
+### Day 20: XGBoost (Extreme Gradient Boosting)
+*Session: "Advanced Ensemble Methods & Boosting"*
+
+- **Boosting vs. Bagging:** Unlike Random Forests (which build trees independently in parallel), **Boosting** builds trees sequentially. Each new tree focuses on correcting the errors (residuals) made by the previous trees.
+- **Gradient Boosting:** A specific type of boosting that uses gradient descent to minimize the loss function when adding new trees. It is highly effective at capturing complex, non-linear relationships in tabular data.
+- **XGBoost Overview:** Introduced **XGBoost (Extreme Gradient Boosting)**, a highly optimized, scalable implementation of gradient boosting. It is currently the state-of-the-art algorithm for many tabular data competitions (like Kaggle) and real-world applications.
+- **Why XGBoost is Powerful:** 
+  - **Regularization:** It has built-in L1 and L2 regularization to prevent overfitting.
+  - **Speed:** It uses parallel processing and hardware optimization.
+  - **Handling Missing Data:** It has a built-in routine to handle missing values automatically by learning default directions in the trees.
+- **Hyperparameters:** Learned about key tuning parameters such as `n_estimators` (number of trees), `learning_rate` (shrinkage to prevent overfitting), `max_depth` (tree complexity), and `subsample` (fraction of data used per tree).
+- **Application:** We discussed how XGBoost can be applied to complex climate tasks, such as predicting crop yields (like the Syria WheatWatch project) or forecasting extreme weather events by combining many weak predictive rules into one strong predictive model.
 
 
 ## Applied Dev & Deployment
