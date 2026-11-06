@@ -503,6 +503,20 @@ This session showed us how messy real-world data can be—and how a structured c
 
 ---
 
+## 🌍 Special Session
+
+### Day 24: Special Session – AI for Everyone
+*Session: "AI for Everyone: Climate Action & Practical Applications"*
+
+- **Session Overview:** We had a special, program-wide session titled **"AI for Everyone"**, designed to make artificial intelligence accessible to a broader audience. This session was not tied to a specific technical pathway but served as an essential bridge between our technical training and real-world impact.
+- **Core Concepts:** The session demystified key AI terminology, breaking down the differences between **Artificial Intelligence, Machine Learning, and Generative AI (GenAI)**. We looked at practical GenAI examples to understand how these models generate new content and solve problems.
+- **Climate & Sustainability Applications:** A major focus was placed on how AI is being applied to pressing climate challenges, specifically exploring use cases in **agriculture, water management, energy, and climate action**. This directly reinforced the overarching theme of the FTL Syria program.
+- **Practical Prompting & Ethics:** We learned the fundamentals of **prompt engineering**—how to effectively communicate with AI models to get the best results. Crucially, the session also covered **responsible AI use**, emphasizing the importance of ethics, bias mitigation, and transparency in AI applications.
+- **Accessibility:** The session highlighted that AI is for everyone. No programming experience was required, proving that understanding and applying AI concepts is accessible to professionals, educators, entrepreneurs, and self-taught learners from all backgrounds.
+
+---
+
+
 ## 🙏 Acknowledgements
 
 A huge thank you to the entire team and all the organizers for making this incredible learning opportunity possible.
