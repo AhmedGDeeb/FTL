@@ -30,8 +30,8 @@ The program is structured into several key phases. I will update this section as
 | **Pair Coding** | 🔄 **In Progress** | Pair Coding Sessions |
 | **Applied Dev & Deployment** | 🔄 **In Progress** | Git, GitHub, Command Line, Docker, APIs, Model Integration |
 | **Hands-on Labs** | 🔄 **In Progress** | Hands-on Labs sessions, Kaggle |
-| **Specialized Sessions** | ⏳ Not Started | Cybersecurity, AI Security, AI for Climate, Smart Grids |
-| **Capstone Project** | ⏳ Not Started | Literature review, Problem statement, Model development, Final Presentation |
+| **Specialized Sessions** | 🔄 **In Progress** | Cybersecurity, AI Security, AI for Climate, Smart Grids |
+| **Capstone Project** | 🔄 **In Progress** | Literature review, Problem statement, Model development, Final Presentation |
 | **Professional Certifications**| ⏳ Not Started | Power Systems, Wireless Networking, IoT, Climate Monitoring |
 
 **Key Programme Timelines:**
@@ -473,9 +473,9 @@ This session showed us how messy real-world data can be—and how a structured c
 - **Key Takeaways:** This challenge was a fantastic capstone for the Applied ML module. It proved that thoughtful feature engineering (especially extracting the `Title`) and robust validation (using stratified K-fold) are just as important as the model algorithm itself.
 
 
-## 🎓 Capstone Project: [Project Title Placeholder]
+## 🎓 Capstone Project: SentinelMesh
 
-- **Project Idea:** _To be decided._
+- **Project Idea:** [here](/Capstone%20Project/docs/Idea%20Proposal.md)
 - **Literature Review:** _To be completed._
 - **Problem Statement:** _To be defined._
 - **Methodology & Models:** _To be developed._
@@ -491,12 +491,42 @@ This session showed us how messy real-world data can be—and how a structured c
 
 ---
 
+### 👥 Team Members
+
+| Name | Email Address | Field | WhatsApp |
+| :--- | :--- | :--- | :--- |
+| **Nimra Afzaal** | nimraafzaal1998@gmail.com | Electrical and Power Engineering | +03094713313 |
+| **Sular Albalkhi** | sularalbalkhi@gmail.com | Electronics and Communications Engineering | +936943700523 |
+| **Zaid Aldeen Mohammad Kiki** | kikizaid2@gmail.com | Electrical and Power Engineering | +963997527701 |
+| **Ahmad Deeb** | ahmaddeebdev@gmail.com | Electronics and Communications Engineering | +963984074032 |
+
+### 📋 Project Details
+
+- **Project Idea:** **SentinelMesh** – A decentralized, solar-powered IoT mesh network using ESP32 devices (Edge nodes with cameras + Backbone nodes) to collect environmental data and images for real-time monitoring, early warning, and agricultural optimization.
+- **Literature Review:** _To be completed._
+- **Problem Statement:** The Syrian context (and remote wild forests) faces severe challenges with reliable network coverage, power outages, and environmental monitoring. Current solutions rely heavily on government networks and constant power, making them fragile. There is a critical need for an independent, self-sustaining network capable of providing real-time, actionable data to farmers, forest rangers, and researchers without adding load to existing infrastructure.
+- **Methodology & Models:** 
+  - **Hardware:** 2 ESP32 devices (1 Edge node with camera + sensors, 1 Backbone node for mesh routing).
+  - **Power:** Solar panels + battery management systems for off-grid operation.
+  - **Network:** Independent Mesh Network protocol (e.g., ESP-MESH) for peer-to-peer data relay.
+  - **AI/ML (On-Edge or Lightweight Server):** YOLO object detection for fire detection, wildlife monitoring, and herd counting; regression models for crop yield/weather prediction.
+- **Final Deliverable:** A working MVP prototype (2 ESP devices), a system dashboard, and a final presentation scheduled for December 11-12, 2026.
+
+### The MVP Use Cases
+
+While the infrastructure has limitless potential, our MVP will focus on four core applications:
+
+1. **Hyper-local Weather & Soil Monitoring:** Collecting real-time data on solar irradiance, rainfall, and soil moisture from the ground. This data provides highly accurate, localized forecasting for crop production and gives farmers immediate visibility into field conditions.
+2. **Wildfire Early Warning:** Utilizing the edge camera to continuously capture images and run lightweight YOLO models to detect smoke or fire anomalies, instantly alerting users before a fire spreads.
+3. **Automated Wildlife Tracking:** Analyzing images to identify wild animals, automatically logging their species, location, and timestamp into the system for ecological research.
+4. **Herd Counting:** For farmers who deploy the device near grazing areas, the system uses YOLO object detection to count the herd, helping them monitor their livestock remotely.
+
 ### 🗺️ Capstone Project Pathway & Timeline
 
 | Date | Deliverable | Description | Status | Notes |
 | :--- | :--- | :--- | :---: | :--- |
-| **Friday, 6 November** | **1-Page Idea Proposal** | Define the user and problem, identify the SDG pathway, and list two references, candidate data, and the proposed method. | ⏳ Not Started | |
-| **Friday, 20 November** | **Concept Note & Plan** | Literature gap analysis, data and technology review, detailed methodology, system architecture, milestones, risk assessment, and ethics. | ⏳ Not Started | |
+| **Friday, 6 November** | **1-Page Idea Proposal** | Define the user and problem, identify the SDG pathway, and list two references, candidate data, and the proposed method. | ✅ **Done** | |
+| **Friday, 20 November** | **Concept Note & Plan** | Literature gap analysis, data and technology review, detailed methodology, system architecture, milestones, risk assessment, and ethics. | 🔄 **In Progress** | |
 | **Friday, 4 December** | **Technical Package** | Data preparation, EDA, features, baseline model, time-aware validation, model testing, deployment guide, and a reproducible repository. | ⏳ Not Started | |
 | **Thursday, 10 December** | **Final Slides Submission** | Submit the final presentation slides via the provided form, including the GitHub URL and the submitted version. | ⏳ Not Started | |
 | **Friday–Saturday, 11–12 December** | **Final Presentations** | Present the complete project: problem, evidence, results, prototype demo, limitations, and next steps. | ⏳ Not Started | |
