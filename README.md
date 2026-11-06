@@ -461,6 +461,7 @@ This session showed us how messy real-world data can be—and how a structured c
 ---
 
 ### Day 22: Kaggle Challenge – Results & Code Presentation
+
 *Session: "Wrap-up and Discussion"*
 
 - **My Approach & Code:** I built a highly engineered pipeline to tackle the Titanic dataset, focusing heavily on feature engineering and robust validation. [My code](/Hands-on%20Labs/notebook39a5055b51.ipynb) is available in the repository, but the key highlights include:
@@ -474,13 +475,31 @@ This session showed us how messy real-world data can be—and how a structured c
 
 ## 🎓 Capstone Project: [Project Title Placeholder]
 
-This section is dedicated to my final Capstone project, a requirement for graduation. The project must connect AI and climate and follow a structured development process.
-
 - **Project Idea:** _To be decided._
 - **Literature Review:** _To be completed._
 - **Problem Statement:** _To be defined._
 - **Methodology & Models:** _To be developed._
 - **Final Deliverable:** _A working prototype/analysis and a final presentation scheduled for December 22-23, 2026._
+
+### Day 23: Capstone Project Kickoff & Methodology
+*Session: "Capstone Introduction and Deliverables"*
+
+- **Project Launch:** Mr. Cristóvão Cacombe introduced the Capstone Project, the final and most significant requirement for graduation. This project requires us to synthesize everything learned over the past 3.5 months—AI, Python, data science, and engineering—and apply it to a real-world climate, energy, or environmental challenge.
+- **Team Formation:** We were officially divided into our Capstone teams. This marks the transition from individual assignments (like the Kaggle challenge) to collaborative, long-term project development.
+- **First Deliverable:** We immediately began working on the first deliverable. The initial step requires defining a **1-page idea proposal** that clearly outlines the user and the problem, maps the project to a specific **SDG pathway**, and includes two academic/technical references, candidate data sources, and the proposed methodology. 
+- **Structured Development:** Cris emphasized that this is not just a coding exercise; it is a structured engineering project. We must follow a rigorous, time-aware methodology, document our progress, and ensure our final prototype is reproducible and deployable.
+
+---
+
+### 🗺️ Capstone Project Pathway & Timeline
+
+| Date | Deliverable | Description | Status | Notes |
+| :--- | :--- | :--- | :---: | :--- |
+| **Friday, 6 November** | **1-Page Idea Proposal** | Define the user and problem, identify the SDG pathway, and list two references, candidate data, and the proposed method. | ⏳ Not Started | |
+| **Friday, 20 November** | **Concept Note & Plan** | Literature gap analysis, data and technology review, detailed methodology, system architecture, milestones, risk assessment, and ethics. | ⏳ Not Started | |
+| **Friday, 4 December** | **Technical Package** | Data preparation, EDA, features, baseline model, time-aware validation, model testing, deployment guide, and a reproducible repository. | ⏳ Not Started | |
+| **Thursday, 10 December** | **Final Slides Submission** | Submit the final presentation slides via the provided form, including the GitHub URL and the submitted version. | ⏳ Not Started | |
+| **Friday–Saturday, 11–12 December** | **Final Presentations** | Present the complete project: problem, evidence, results, prototype demo, limitations, and next steps. | ⏳ Not Started | |
 
 ---
 
