@@ -27,7 +27,9 @@ The program is structured into several key phases. I will update this section as
 | **Python Hackathon** | ✅ **Done** | Group-based problem solving and presentation |
 | **Data Analysis & SDG** | ✅ **Done** | Data manipulation, analysis techniques, peer coding |
 | **Applied Machine Learning** | 🔄 **In Progress** | Regression, Classification, Clustering, Model Development |
+| **Pair Coding** | 🔄 **In Progress** | Pair Coding Sessions |
 | **Applied Dev & Deployment** | 🔄 **In Progress** | Git, GitHub, Command Line, Docker, APIs, Model Integration |
+| **Hands-on Labs** | 🔄 **In Progress** | Hands-on Labs sessions, Kaggle |
 | **Specialized Sessions** | ⏳ Not Started | Cybersecurity, AI Security, AI for Climate, Smart Grids |
 | **Capstone Project** | ⏳ Not Started | Literature review, Problem statement, Model development, Final Presentation |
 | **Professional Certifications**| ⏳ Not Started | Power Systems, Wireless Networking, IoT, Climate Monitoring |
@@ -36,6 +38,8 @@ The program is structured into several key phases. I will update this section as
 - **Program Duration:** September - December 2026
 - **Python Hackathon:** September 28 - October 2, 2026
 - **Capstone Final Presentation:** December 22-23, 2026
+
+> 📂 **Note:** All codes and lecture materials for th program can be found in the [FTL Syria Students Material OneDrive folder](https://onedrive.live.com/shared?id=%2Fpersonal%2F4476bc34c28f3497%2FDocuments%2FFTL%5FSyria%5Fstudents%5Fmaterial&listurl=%2Fpersonal%2F4476bc34c28f3497%2FDocuments).
 
 ---
 
@@ -324,8 +328,6 @@ This session showed us how messy real-world data can be—and how a structured c
 
 ## Applied Machine Learning
 
-## Applied Machine Learning
-
 ### Day 14: Linear Regression
 
 - **The model:** `f(x) = w*x + b` — `w` (weight/slope) measures how much the prediction changes as the input changes; `b` (bias/intercept) is the predicted value when `x = 0`. `ŷ` is the model's prediction.
@@ -445,6 +447,30 @@ This session showed us how messy real-world data can be—and how a structured c
 - **Pull requests:** Opened a PR on GitHub to propose changes, reviewed the diff, and merged it — reinforcing the collaborative workflow used by teams and open-source projects.
 - **Best practices:** Write clear, imperative commit messages; commit small, logical changes frequently; pull before you push; never commit secrets or large data files; use `.gitignore` to exclude notebooks' checkpoints, virtual environments, and sensitive files.
 - **Practical application:** Initialized and pushed my own FTL learning journal repository to GitHub, applying these commands end to end — which is how this README is version-controlled and shared.
+
+## Hands-on Labs
+
+### Day 21: Kaggle Challenge - Titanic: Machine Learning from Disaster
+*Session: "Independent Challenge Work"*
+
+- **The Challenge:** The FTL Syria program introduced a practical, independent challenge to apply our machine learning skills to the famous Kaggle **Titanic** competition. The objective was to build a classification model to predict passenger survival based on features like age, sex, passenger class, and fare.
+- **The Workflow:** We were tasked with working independently to develop a complete ML workflow. This included exploring the data, handling missing values (like `Age` and `Cabin`), encoding categorical variables, and training at least one classification model. 
+- **Evaluation & Target:** The goal was to use a validation set to evaluate our models before submitting predictions to Kaggle. The performance target was set at **at least 75% public leaderboard accuracy**, with a deadline of October 28, 2026.
+
+> You can see full details [here](/Hands-on%20Labs/FTL%20Syria%20–%20Kaggle%20Machine%20Learning%20Challenge.md)
+---
+
+### Day 22: Kaggle Challenge – Results & Code Presentation
+*Session: "Wrap-up and Discussion"*
+
+- **My Approach & Code:** I built a highly engineered pipeline to tackle the Titanic dataset, focusing heavily on feature engineering and robust validation. [My code](/Hands-on%20Labs/notebook39a5055b51.ipynb) is available in the repository, but the key highlights include:
+  - **Advanced Imputation:** Instead of dropping data, I imputed missing `Age` values using the median grouped by `Pclass` and `Sex`.
+  - **Feature Engineering:** I extracted **`Title`** (Mr, Mrs, Miss, etc.) from the `Name` column, which is highly correlated with survival. I also created a **`FamilySize`** feature by combining `SibSp` and `Parch`, and an **`IsAlone`** indicator, based on our earlier EDA that showed traveling alone had distinct survival patterns. I also created a `HasCabin` flag and applied a `log1p` transformation to the skewed `Fare` column.
+  - **Modeling & Tuning:** I used a **Random Forest Classifier** and performed extensive hyperparameter tuning using `GridSearchCV` with `StratifiedKFold` to prevent overfitting.
+- **Evaluation & Performance:** My tuned model achieved a very strong **~84.0% cross-validation accuracy** and an **ROC AUC of ~0.88**. 
+- **The Result:** [I successfully completed the challenge and submitted my predictions to Kaggle](/Hands-on%20Labs/result.jpeg), achieving a **public leaderboard score of 0.75837**. I exceeded the 75% target and secured a solid position on the leaderboard! 🎉
+- **Key Takeaways:** This challenge was a fantastic capstone for the Applied ML module. It proved that thoughtful feature engineering (especially extracting the `Title`) and robust validation (using stratified K-fold) are just as important as the model algorithm itself.
+
 
 ## 🎓 Capstone Project: [Project Title Placeholder]
 
