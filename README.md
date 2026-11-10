@@ -481,6 +481,48 @@ This session showed us how messy real-world data can be—and how a structured c
 
 ---
 
+### Day 27: FTL Syria - ML Challenge Kickoff
+*Session: "Applied Machine Learning Challenge"*
+
+- **The Challenge:** The program introduced a practical, team-based Machine Learning Challenge to apply the concepts we've learned—from data analysis and regression to classification and clustering—to real-world climate problems. The challenge is structured around five distinct problems, each tackling a different aspect of climate change using open data sources like NASA POWER, FAOSTAT, and the World Bank.
+
+- **Problem Areas:** The five challenges are:
+    1.  **Crop Yield Prediction:** (Regression) Predict crop yields based on historical climate data.
+    2.  **Drought Risk Classification:** (Classification) Classify locations as "normal" or "drought" based on meteorological data.
+    3.  **Climate Vulnerability Clustering:** (Unsupervised) Group countries based on climate and socioeconomic vulnerability.
+    4.  **Solar Energy Potential:** (Regression) Predict daily solar radiation from weather variables.
+    5.  **Climate Anomaly Detection:** (Unsupervised) Identify unusual weather patterns without labeled data.
+
+---
+
+#### Our Project: Problem 1 – Crop Yield Prediction
+
+- **Team Allocation:** Our team, **Group 4**, was assigned **Problem 1: Crop Yield Prediction**.
+
+- **Problem Statement:** Develop a machine learning model that predicts agricultural crop yield based on historical climate and agricultural data.
+
+- **Research Question:** Can historical weather conditions help us predict crop yields, and which machine learning model produces more accurate predictions?
+
+- **Project Plan & Requirements:**
+    - **Datasets:** We will use **FAOSTAT** (for crop production, harvested area, and yield) and **NASA POWER** (for historical temperature, precipitation, and solar radiation data).
+    - **Features:** Our features will include average temperature, maximum temperature, annual/seasonal rainfall, solar radiation, country, year, and crop type. The target variable is **crop yield (hg/ha)**.
+    - **Models to Implement:**
+        - **Model A:** Decision Tree Regressor
+        - **Model B:** XGBoost Regressor
+    - **Evaluation Metrics:** We will evaluate and compare the models using **MAE**, **RMSE**, and **R²**.
+
+- **Key Considerations:** A critical instruction is to avoid data leakage. We must not use production volume or harvested area as predictors for yield, as they are components of yield itself. We also need to be careful to only use climate data that would be available at the time of prediction.
+
+---
+
+#### Project Details
+
+You can find full project detials [here](/Applied%20Machine%20Learning%20Team%20Challenge/idea.md)
+
+---
+
+This project is an excellent opportunity to build a complete machine learning workflow, from data collection and cleaning to modeling and evaluation, while addressing a critical real-world problem in climate-resilient agriculture.
+
 ## Applied Dev & Deployment
 
 ### Day 17: Git & GitHub
