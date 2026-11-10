@@ -432,6 +432,54 @@ This session showed us how messy real-world data can be—and how a structured c
 - **Hyperparameters:** Learned about key tuning parameters such as `n_estimators` (number of trees), `learning_rate` (shrinkage to prevent overfitting), `max_depth` (tree complexity), and `subsample` (fraction of data used per tree).
 - **Application:** We discussed how XGBoost can be applied to complex climate tasks, such as predicting crop yields (like the Syria WheatWatch project) or forecasting extreme weather events by combining many weak predictive rules into one strong predictive model.
 
+### Day 25: K-Means Clustering – Theory & Practical Application
+*Session: "K-Means Clustering"*
+
+- **Unsupervised Learning:** We were introduced to **Unsupervised Learning**, a paradigm where models find structure in unlabeled data without predefined answers. The core task is **Clustering**, which is the process of dividing data points into groups (clusters) such that points within the same group are more similar to each other than to points in other groups.
+
+- **K-Means Algorithm:** We explored the K-Means algorithm intuitively and practically. The process is iterative and follows these steps:
+    1.  **Initialize:** Choose the number of clusters (`K`) and randomly place `K` centroids in the data space.
+    2.  **Assign:** Assign each data point to the nearest centroid (using squared Euclidean distance).
+    3.  **Update:** Move each centroid to the average position (mean) of all points assigned to it.
+    4.  **Repeat:** Continue steps 2 and 3 until the centroids no longer move significantly or a maximum number of iterations is reached.
+
+- **Cost Function & Optimization:** The algorithm's objective is to minimize the **Within-Cluster Sum of Squares (WCSS)**, also called **Distortion** or **Inertia**. This cost function `J` measures the total squared distance between each point and its assigned cluster's centroid: `J = (1/m) * Σ || x⁽ⁱ⁾ - μ_c(i) ||²`. The algorithm is guaranteed to converge to a local minimum.
+
+- **Random Initialization:** A key challenge is that K-Means can get stuck in a poor local optimum depending on the initial random placement of centroids. A common solution is to run the entire K-Means algorithm multiple times (e.g., 50-1000 times) with different random initializations and choose the model that yields the lowest final cost. The `n_init` parameter in Scikit-learn's KMeans controls this.
+
+- **Choosing the Optimal `K`:** We learned the **Elbow Method** as a heuristic for selecting the best number of clusters. This involves:
+    1.  Running K-Means for a range of `K` values (e.g., 1 to 10).
+    2.  Calculating the WCSS for each `K`.
+    3.  Plotting `K` against WCSS. The "elbow point" on the plot—where the rate of decrease in WCSS sharply changes—is often considered the optimal `K`.
+    2.  The `ML_Week5_Clustering.ipynb` notebook provided hands-on practice, implementing K-Means from scratch and using `sklearn`, and applying the Elbow Method to find the ideal number of clusters for a synthetic dataset.
+
+---
+
+### Day 26: Anomaly Detection
+*Session: "Anomaly Detection and ML metrics"*
+
+- **Anomaly Detection:** We introduced **Anomaly Detection**, the process of identifying rare items, events, or observations that differ significantly from the majority of the data. It is widely used in fraud detection, manufacturing defect identification, and monitoring complex systems.
+
+- **Gaussian Distribution Method:** The primary technique we covered is based on modeling the data with a **Gaussian (Normal) Distribution**. For a dataset of normal examples, the goal is to learn the probability density function `p(x)`. The core idea is that a new example `x` is considered an anomaly if its probability `p(x)` is very low (i.e., `p(x) < ε`).
+
+- **Algorithm for Anomaly Detection:**
+    1.  **Choose Features:** Select features `x_i` that might be indicative of anomalous examples.
+    2.  **Fit Parameters:** For each feature, estimate the mean (`μ_j`) and variance (`σ_j²`) from the training data (assuming only normal examples).
+        - `μ_j = (1/m) * Σ x_j⁽ⁱ⁾`
+        - `σ_j² = (1/m) * Σ (x_j⁽ⁱ⁾ - μ_j)²`
+    3.  **Compute `p(x)`:** For a new example `x`, calculate its probability by multiplying the probabilities of each feature, assuming they are independent:
+        `p(x) = Π_j p(x_j; μ_j, σ_j²)`
+    4.  **Flag Anomaly:** If `p(x) < ε`, classify as an anomaly.
+
+- **Evaluation of Anomaly Detection:** Because anomaly detection datasets are highly imbalanced, **Accuracy is not a good metric**. Instead, we use:
+    - **F1-Score:** The harmonic mean of **Precision** and **Recall**. This is the most common metric.
+    - We learned how to evaluate the model by finding the best threshold `ε` that maximizes the **F1-Score** on a validation set. The `ML_Week5_Anomaly_Detection.ipynb` notebook provided a practical implementation of this process.
+
+- **Error Analysis & Feature Engineering:** We discussed the importance of **error analysis**. If the model struggles, it's often because the `p(x)` values for normal and anomalous examples are comparable. This can be addressed by:
+    - **Feature Transformation:** If a feature is not Gaussian (e.g., skewed), transforming it to be more Gaussian (e.g., using `log(x)`, `log(x+1)`, or `x^0.5`) can improve performance.
+    - **Adding New Features:** Adding more discriminative features that help separate anomalies from normal data points.
+
+---
 
 ## Applied Dev & Deployment
 
